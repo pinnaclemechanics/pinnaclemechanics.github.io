@@ -405,6 +405,8 @@ header nav #click {
         margin-bottom: 0.5rem;
         .accordion-toggle {
           background: inherit;
+          font-family: "Poppins";
+          letter-spacing: 0.5pt;
           border: none;
           width: 100%;
           text-align: left;
@@ -1247,14 +1249,17 @@ footer {
               }
             }
             &.accordion-item {
-              position: relative; // neede
+              position: relative;
+              line-height: 30px;
               .accordion-toggle {
                 background: inherit;
                 border: none;
                 width: 100%;
                 text-align: left;
                 cursor: pointer;
-                padding: 0.5rem 0;
+                padding: 0 10px;
+                font-family: "Poppins";
+                letter-spacing: 0.5pt;
                 color: #fff;
                 font-size: 1rem;
                 text-transform: capitalize;

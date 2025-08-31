@@ -361,6 +361,8 @@ header nav #click {
 }
 .nav-container header nav ul.open .accordion-item .accordion-toggle {
   background: inherit;
+  font-family: "Poppins";
+  letter-spacing: 0.5pt;
   border: none;
   width: 100%;
   text-align: left;
@@ -1187,6 +1189,7 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   }
   .nav-container header nav .nav-list li.accordion-item {
     position: relative;
+    line-height: 30px;
   }
   .nav-container header nav .nav-list li.accordion-item .accordion-toggle {
     background: inherit;
@@ -1194,7 +1197,9 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     width: 100%;
     text-align: left;
     cursor: pointer;
-    padding: 0.5rem 0;
+    padding: 0 10px;
+    font-family: "Poppins";
+    letter-spacing: 0.5pt;
     color: #fff;
     font-size: 1rem;
     text-transform: capitalize;
