@@ -40,7 +40,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: #fdf9ee;
+  background-color: #fff;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -397,159 +397,18 @@ img {
 }
 
 .editorial-card {
-  display: flex;
+  padding: 10px;
 }
 .editorial-card .card-grid_start {
   display: flex;
   flex-direction: column;
+  gap: 1em;
+  padding: 10px;
 }
-.editorial-card .card-grid_start .inner .subtitle {
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #18152a;
-  letter-spacing: 0.2em;
-  font-size: 0.85em;
-}
-.editorial-card .card-grid_start .inner .editorial-title {
-  line-height: 27pt;
-  color: #18152a;
-  font-size: 1.7rem;
-  font-weight: 500;
-  font-variant-caps: all-petite-caps;
-  letter-spacing: 0.3rem;
-}
-.editorial-card .card-grid_start .inner .editorial-desc {
-  display: flex;
-  flex-direction: column;
-}
-.editorial-card .card-grid_start .inner .editorial-desc span.signature {
-  justify-content: flex-end;
-  text-align: right;
-  font-style: italic;
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 30px;
-  letter-spacing: 1.7px;
-}
-.editorial-card .card-grid_start .inner .editorial-desc_alt {
-  display: flex;
-  flex-direction: column;
-  word-wrap: normal;
-  margin-bottom: 2em;
-}
-.editorial-card .card-grid_start .inner .editorial-desc_alt span.tertiary-link {
-  color: #18152a;
-  font-weight: 600;
-  display: contents;
-}
-.editorial-card .card-grid_start .inner .editorial-desc_alt span.tertiary-link:hover {
-  text-decoration: underline;
-}
-.editorial-card .card-grid_start .inner .editorial-desc_alt span.signature {
-  justify-content: flex-end;
-  text-align: right;
-  font-style: italic;
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 30px;
-  letter-spacing: 1.7px;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-.editorial-card .card-grid_start .inner .gallery {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  grid-gap: 2em;
-  width: 92vw;
-}
-.editorial-card .card-grid_start .inner .gallery .thumbnail-item {
-  border: 1px solid #18152a;
-  border-radius: 5px;
-  background: #fff;
-}
-.editorial-card .card-grid_start .inner .gallery .thumbnail-item .thumbnail__desc {
-  color: #18152a;
-  font-size: 22px;
-  padding: 1em;
-  padding-bottom: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.editorial-card .card-grid_start .inner .gallery .thumbnail-item .thumbnail__editorial {
-  color: #000;
-  font-size: 16px;
-  padding: 1em;
-  padding-bottom: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.editorial-card .card-grid_start .inner .gallery .thumbnail-item img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #18152a;
-  border-radius: 5px 5px 0 0;
-  transition: all 0.5s ease-in-out;
-}
-.editorial-card .card-grid_start .inner .gallery .thumbnail-item img:hover {
-  opacity: 0.5;
-}
-.editorial-card .card-grid_start .inner .gallery .thumbnail-item:hover {
-  text-decoration: underline;
-}
-
-.events-lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  font-weight: 500;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.events-lightbox .events-lightbox__content {
-  position: relative;
-  width: 90%;
-  background: black;
-  border-radius: 5px;
-  padding: 1em;
-}
-.events-lightbox .events-lightbox__content .events-lightbox__title {
-  font-weight: 500;
-}
-.events-lightbox .events-lightbox__content .close {
-  position: absolute;
-  width: 2em;
-  height: 2em;
-  background: #fff;
-  top: -1em;
-  right: -1em;
-  border-radius: 50%;
-}
-.events-lightbox .events-lightbox__content .close .close-icon {
-  display: flex;
-  align-self: center;
-  justify-self: center;
-}
-.events-lightbox .events-lightbox__content img {
-  margin: 0 auto;
-}
-
-.events-lightbox:target {
-  display: flex;
+.editorial-card .card-grid_end {
+  background: url("../img/branding/editorial-banner.png") no-repeat center/contain;
+  min-height: 300px;
+  height: 100%;
 }
 
 .contact-page-section {
@@ -967,22 +826,23 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     justify-content: center;
     justify-content: space-evenly;
   }
-  .editorial-card .card-grid_start img {
-    display: flex;
-    align-self: center;
-    width: 60%;
+  .editorial-card {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto;
+    gap: 2rem;
   }
-  .editorial-card .card-grid_start .inner {
+  .editorial-card .card-grid_start {
+    grid-column: 1/2;
+    grid-row: 1/3;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    z-index: 2;
   }
-  .editorial-card .card-grid_start .inner .editorial-desc_alt {
-    margin-right: 4em;
-  }
-  .editorial-card .card-grid_start .inner img {
-    display: flex;
-    align-self: center;
-    width: 35%;
+  .editorial-card .card-grid_end {
+    grid-column: 2/3;
+    grid-row: 1/3;
   }
   .menu-btn svg {
     right: 2em;
