@@ -181,10 +181,6 @@ img {
   text-decoration: underline;
 }
 
-header nav #click {
-  display: none;
-}
-
 .nav-container {
   background: #6284b4;
   background: linear-gradient(90deg, rgb(98, 132, 180) 0%, rgb(22, 18, 38) 100%);
@@ -196,8 +192,7 @@ header nav #click {
   justify-content: center;
   border-bottom: 1px solid rgba(140, 57, 33, 0.168627451);
   box-shadow: 11px 12px 9px -7px rgba(174, 174, 174, 0.39);
-  position: fixed;
-  z-index: 99;
+  transition: all 0.3s ease-in-out;
 }
 .nav-container header {
   width: 100%;
@@ -335,12 +330,11 @@ header nav #click {
 }
 
 .hero {
-  position: relative;
-  display: flex;
-  height: 100vh;
+  min-height: 100vh;
   width: -webkit-fill-available;
   overflow: hidden;
   border-bottom: 1px solid #18152a;
+  background: url("../img/banners/hero-banners/index.png") no-repeat center/cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -370,32 +364,36 @@ header nav #click {
 .hero .hero-content .primary-button {
   max-width: 250px;
 }
-.hero .hero-image {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  background: url("../img/banners/hero-banners/index.png") no-repeat center/cover;
-  z-index: 1;
-}
 
-.research-qoute {
+.usp-banner {
+  min-height: 8em;
+  width: -webkit-fill-available;
+  background-color: #fff;
+  border-bottom: 1px solid #18152a;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.research-qoute .qoute-text p {
-  font-size: 22px;
-}
-.research-qoute .qoute-text .signature {
+.usp-banner .usp-item {
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-end;
-  font-style: normal;
-  font-size: 17px;
-  margin-right: 2em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  text-align: center;
+}
+.usp-banner .usp-item img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 0.5em;
+  border: none;
+}
+.usp-banner .usp-item h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #18152a;
+  letter-spacing: 0.75px;
 }
 
 .editorial-card {
@@ -408,13 +406,13 @@ header nav #click {
 .editorial-card .card-grid_start .inner .subtitle {
   text-transform: uppercase;
   font-weight: 700;
-  color: #903564;
+  color: #18152a;
   letter-spacing: 0.2em;
   font-size: 0.85em;
 }
 .editorial-card .card-grid_start .inner .editorial-title {
   line-height: 27pt;
-  color: #8c3921;
+  color: #18152a;
   font-size: 1.7rem;
   font-weight: 500;
   font-variant-caps: all-petite-caps;
@@ -441,7 +439,7 @@ header nav #click {
   margin-bottom: 2em;
 }
 .editorial-card .card-grid_start .inner .editorial-desc_alt span.tertiary-link {
-  color: #8c3921;
+  color: #18152a;
   font-weight: 600;
   display: contents;
 }
@@ -474,12 +472,12 @@ header nav #click {
   width: 92vw;
 }
 .editorial-card .card-grid_start .inner .gallery .thumbnail-item {
-  border: 1px solid #8c3921;
+  border: 1px solid #18152a;
   border-radius: 5px;
   background: #fff;
 }
 .editorial-card .card-grid_start .inner .gallery .thumbnail-item .thumbnail__desc {
-  color: #8c3921;
+  color: #18152a;
   font-size: 22px;
   padding: 1em;
   padding-bottom: 0;
@@ -497,7 +495,7 @@ header nav #click {
 .editorial-card .card-grid_start .inner .gallery .thumbnail-item img {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid #8c3921;
+  border-bottom: 1px solid #18152a;
   border-radius: 5px 5px 0 0;
   transition: all 0.5s ease-in-out;
 }
@@ -566,7 +564,7 @@ header nav #click {
 .contact-page-section .contact-container .contact-form {
   display: flex;
   flex-direction: column;
-  border: 1px solid #8c3921;
+  border: 1px solid #18152a;
   border-radius: 5px;
 }
 .contact-page-section .contact-container .contact-form .form-title {
@@ -577,7 +575,7 @@ header nav #click {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #8c3921;
+  border-top: 1px solid #18152a;
   border-radius: 0;
   background-color: rgba(245, 240, 197, 0.7607843137);
 }
@@ -599,7 +597,7 @@ header nav #click {
   justify-content: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #8c3921;
+  color: #18152a;
   font-family: "Poppins";
   font-size: 16px;
   background-color: rgba(70, 219, 70, 0.2);
@@ -608,14 +606,14 @@ header nav #click {
   height: 36px;
   margin-bottom: 2em;
   border-radius: 5px;
-  border: 1px solid #8c3921;
+  border: 1px solid #18152a;
   transition: all 0.5s ease-in-out;
   box-shadow: 11px 12px 9px -7px rgba(174, 174, 174, 0.39);
 }
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area .submit-button:hover {
-  background: #d3cd94;
-  color: #8c3921;
-  border-color: #8c3921;
+  background: #8578d1;
+  color: #18152a;
+  border-color: #18152a;
 }
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area span {
   display: flex;
@@ -630,7 +628,7 @@ header nav #click {
   border-left: none;
   border-bottom: none;
   border-right: none;
-  border-top: 1px solid #8c3921;
+  border-top: 1px solid #18152a;
   border-radius: 0;
 }
 .contact-page-section .contact-container .contact-form .contact-form-container .right .contact-form__logo-container {
@@ -657,12 +655,12 @@ header nav #click {
   line-height: 0;
   letter-spacing: 1.1pt;
   text-transform: uppercase;
-  color: #8c3921;
+  color: #18152a;
 }
 .contact-page-section .contact-container .contact-form .contact-form-container .right .contact-form__logo-container .logo-container .logo-subtitle {
   font-size: 12px;
   line-height: 40px;
-  color: #8c3921;
+  color: #18152a;
 }
 
 .contact-page-section .contact-container .contact-form .contact-form-container .input-area label .text-field::placeholder {
@@ -711,7 +709,7 @@ header nav #click {
   justify-content: center;
 }
 .thank-you-section .thank-you-container .thank-you-message {
-  border: 1px solid #8c3921;
+  border: 1px solid #18152a;
   border-radius: 8px;
   background-color: #fff;
   padding: 10px;
@@ -724,7 +722,7 @@ header nav #click {
 }
 .thank-you-section .thank-you-container .thank-you-message h1 {
   line-height: 27pt;
-  color: #8c3921;
+  color: #18152a;
   font-size: 1.7rem;
   font-weight: 500;
   font-variant-caps: all-petite-caps;
@@ -742,7 +740,7 @@ header nav #click {
   align-items: center;
   justify-content: center;
   background-color: #fff8bd;
-  border: 1px solid #8c3921;
+  border: 1px solid #18152a;
   border-radius: 5px;
   margin: 1em;
   width: 100%;
@@ -751,13 +749,13 @@ header nav #click {
   transition: all 0.5s ease-in-out;
 }
 .thank-you-section .thank-you-container .thank-you-message button a {
-  color: #8c3921;
+  color: #18152a;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 17px;
 }
 .thank-you-section .thank-you-container .thank-you-message button:hover {
-  background: #d3cd94;
+  background: #8578d1;
 }
 
 @keyframes thank-you-animation {
@@ -769,7 +767,7 @@ header nav #click {
   }
 }
 footer {
-  border-top: 1px solid #8c3921;
+  border-top: 1px solid #18152a;
 }
 footer .footer-container {
   display: flex;
@@ -777,7 +775,7 @@ footer .footer-container {
 }
 footer .footer-container .footer-details {
   background: #fff8bd;
-  color: #8c3921;
+  color: #18152a;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -807,7 +805,7 @@ footer .footer-container .footer-details .footer-top-bar .logo .logo-placeholder
 }
 footer .footer-container .footer-details .footer-top-bar .logo .logo-title {
   font-size: 22px;
-  color: #8c3921;
+  color: #18152a;
   font-variant-caps: all-petite-caps;
   line-height: 2;
 }
@@ -822,7 +820,7 @@ footer .footer-container .footer-details .logo-container {
   padding-bottom: 20px;
 }
 footer .footer-container .footer-details .logo-container a {
-  color: #8c3921;
+  color: #18152a;
   margin-top: 20px;
 }
 footer .footer-container .footer-details .logo-container .mailto-link {
@@ -840,7 +838,7 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #8c3921;
+  border-top: 1px solid #18152a;
   border-bottom: 1px solid gainsboro;
 }
 .footer-container .footer-social-icon a,
@@ -880,7 +878,7 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   footer .footer-container .footer-details .footer-top-bar .logo .logo-subtitle {
     display: flex;
     font-size: 17px;
-    color: #8c3921;
+    color: #18152a;
     font-variant-caps: all-petite-caps;
     letter-spacing: 0.63pt;
   }
@@ -888,10 +886,6 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
 @media only screen and (min-width: 610px) {
   .menu-btn svg {
     right: 22px;
-  }
-  .research-qoute,
-  .editorial-card {
-    padding: 1.6em;
   }
   .events-lightbox .events-lightbox__content {
     max-width: 480px;
@@ -928,15 +922,17 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
 }
 @media only screen and (min-width: 768px) {
   .hero {
+    display: flex;
+    flex-direction: row;
+    min-height: unset;
     position: relative;
-    align-items: flex-start;
-    height: 70vh;
-    top: 70px;
+    overflow: hidden;
+    background-image: none;
   }
   .hero .hero-content {
-    width: 60vw;
+    width: 70vw;
     background: #fff;
-    padding: 10rem 3rem;
+    padding: 2rem;
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
     display: flex;
     flex-direction: column;
@@ -955,12 +951,21 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     font-size: 20px;
   }
   .hero .hero-image {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
+    flex: 1;
+    background: url(../img/banners/hero-banners/index.png) no-repeat center/cover;
+    margin-left: -15vw;
     height: 70vh;
     width: 60%;
+  }
+  .usp-banner {
+    height: 12em;
+    width: -webkit-fill-available;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
   }
   .editorial-card .card-grid_start img {
     display: flex;
@@ -982,7 +987,6 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   .menu-btn svg {
     right: 2em;
   }
-  .research-qoute,
   .editorial-card,
   .editorial-card > .card-grid-start {
     padding: 2.5em;
@@ -1165,11 +1169,9 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     display: none;
   }
   .hero .hero-content {
-    padding: 10rem 3rem;
-  }
-  .research-qoute {
-    margin: 0 3em;
-    padding-bottom: 2.5em;
+    width: 50vw;
+    padding: 0;
+    padding-left: 3rem;
   }
   .events-lightbox .events-lightbox__content {
     max-width: 504px;
@@ -1221,7 +1223,7 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     width: 50%;
     padding: 4em;
     border: none;
-    border-left: 1px solid #8c3921;
+    border-left: 1px solid #18152a;
     border-radius: 0;
   }
   .contact-page-section .contact-container .contact-form .thank-you-section {
@@ -1235,77 +1237,12 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     transition: all 0.5s ease-in-out;
   }
 }
-@media only screen and (min-width: 1250px) {
-  .modal.active {
-    width: 390px;
-    height: auto;
-  }
-  .modal.active .close-modal {
-    position: relative;
-    top: -35px;
-    left: 93%;
-  }
-  .nav-container header .logo {
-    padding-left: 15.5em;
-  }
-  .nav-container header nav ul {
-    margin-right: 4em;
-  }
-  .research-qoute {
-    padding: 4.5em;
-    justify-content: center;
-  }
-  .editorial-card,
-  .contact-page-section,
-  footer > .footer-container > .footer-details {
-    padding: 0 7.5em;
-  }
-  .editorial-card .card-grid_start .inner .sm-image {
-    width: 40%;
-  }
-  .editorial-card .card-grid_start .inner .gallery {
-    grid-gap: 1em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex: 0 0 250px;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 87%;
-  }
-  .editorial-card .card-grid_start .inner .gallery .thumbnail-item {
-    border: 1px solid #8c3921;
-    border-radius: 5px;
-    background: #fff;
-    width: 303.3333333333px;
-  }
-  .editorial-card .card-grid_start .inner .gallery .thumbnail-item img {
-    padding: 5px;
-  }
-  .editorial-card .card-grid_start .inner .sm-image,
-  .editorial-card .card-grid_start .inner img {
-    width: 60%;
-  }
-  .editorial-card .card-grid_start .inner .charity-vest {
-    width: 40%;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .right {
-    padding: 8em;
-  }
-  .contact-page-section .contact-container .contact-form .contact-form-container .right .contact-form__logo-container .logo-container {
-    padding: 0;
-  }
-  .thank-you-section .thank-you-container .thank-you-message {
-    margin: 2em;
-    padding: 1em;
-  }
-}
 @media only screen and (min-width: 1400px) {
-  .nav-container header .logo {
-    padding-left: 7em;
-  }
   .hero .hero-content {
     padding: 12rem 7rem;
+  }
+  .usp-banner {
+    justify-content: space-evenly;
   }
 }
 /*Large Laptop/ Desktop viewport styles */
@@ -1371,8 +1308,8 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
 }
 @media only screen and (min-width: 1900px) {
   .nav-container {
-    padding-left: 4em;
-    padding-right: 4em;
+    padding-left: 15em;
+    padding-right: 15em;
   }
   .nav-container header .logo {
     padding-left: 0;
@@ -1384,7 +1321,8 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     margin-right: 0;
   }
   .hero .hero-content {
-    padding: 0 15rem;
+    padding: 0;
+    padding-left: 15em;
   }
   .hero .hero-content h1 {
     font-size: 42px;
@@ -1434,7 +1372,7 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-left: 1px solid #8c3921;
+    border-left: 1px solid #18152a;
     border-bottom: none;
     border-right: none;
     border-top: none;
@@ -1460,12 +1398,12 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     line-height: 0;
     letter-spacing: 1.1pt;
     text-transform: uppercase;
-    color: #8c3921;
+    color: #18152a;
   }
   .contact-page-section .contact-container .contact-form .right .contact-form__logo-container .logo-container .logo-subtitle {
     font-size: 18px;
     line-height: 50px;
-    color: #8c3921;
+    color: #18152a;
   }
   footer .footer-container .footer-details {
     padding: 5em 18em;
