@@ -889,7 +889,6 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   .menu-btn svg {
     right: 22px;
   }
-  .make-a-donation-section,
   .research-qoute,
   .editorial-card {
     padding: 1.6em;
@@ -1171,9 +1170,6 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   .research-qoute {
     margin: 0 3em;
     padding-bottom: 2.5em;
-  }
-  .make-a-donation-section .container {
-    padding: 0.9em;
   }
   .events-lightbox .events-lightbox__content {
     max-width: 504px;
