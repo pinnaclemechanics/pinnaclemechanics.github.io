@@ -221,10 +221,10 @@ ul li {
     color: #fff;
     text-decoration: none;
   }
-}
-.primary-button:hover {
-  background-color: #173661;
-  box-shadow: none;
+  :hover {
+    background-color: #173661;
+    box-shadow: none;
+  }
 }
 
 img {
@@ -265,6 +265,7 @@ header nav #click {
     width: 100%;
     height: inherit;
     background-color: transparent;
+    display: flex;
     .logo {
       @include align-left__row;
       padding-left: 1em;
@@ -400,26 +401,23 @@ header nav #click {
   width: -webkit-fill-available;
   overflow: hidden;
   border-bottom: 1px solid #18152a;
-
+  @include align-center__column;
   .hero-content {
-    width: 60vw;
     background: #fff;
-    padding: 8rem 16rem;
-    clip-path: polygon(0 0, 100% 0, $skew-cut 100%, 0% 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 1rem;
     gap: 1em;
     z-index: 2;
+    @include align-center__column;
+    border: 1px solid #18152a;
+    border-radius: 10px;
     h1 {
-      font-size: 38px;
+      font-size: 22px;
       font-weight: 600;
     }
 
     ul li {
-      font-size: 22px;
+      font-size: 16px;
       font-weight: 600;
-      line-height: auto;
       letter-spacing: 0.75px;
     }
     .primary-button {
@@ -430,8 +428,7 @@ header nav #click {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 50%;
-    width: 50%;
+    width: 100%;
     background: url("../img/banners/hero-banners/index.png") no-repeat
       center/cover;
     z-index: 1;
@@ -1003,7 +1000,43 @@ footer {
 }
 
 // Styles for tablets and small laptops
-@media only screen and (min-width: 895px) {
+@media only screen and (min-width: 768px) {
+  .hero {
+    position: relative;
+    align-items: flex-start;
+    height: 70vh;
+    top: 70px;
+    .hero-content {
+      width: 60vw;
+      background: #fff;
+      padding: 10rem 3rem;
+      clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1em;
+      z-index: 2;
+      border-radius: 0;
+      height: 70vh;
+      border: none;
+      h1 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+    .hero-image {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      height: 70vh;
+      width: 60%;
+    }
+  }
+
   .editorial-card .card-grid_start {
     img {
       display: flex;
@@ -1074,7 +1107,7 @@ footer {
 }
 
 //Styles for Laptops
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1024px) {
   .nav-container {
     display: flex;
     flex-direction: row;
@@ -1109,7 +1142,7 @@ footer {
       nav {
         @include align-center__row;
         justify-content: flex-end;
-        margin: 0 4em;
+        margin: 0 2em;
         max-height: 60px;
         height: 100%;
         .nav-list {
@@ -1199,6 +1232,10 @@ footer {
 
   .menu-btn svg {
     display: none;
+  }
+
+  .hero .hero-content {
+    padding: 10rem 3rem;
   }
 
   .research-qoute {
@@ -1370,6 +1407,15 @@ footer {
   }
 }
 
+@media only screen and (min-width: 1400px) {
+  .nav-container header .logo {
+    padding-left: 7em;
+  }
+
+  .hero .hero-content {
+    padding: 12rem 7rem;
+  }
+}
 /*Large Laptop/ Desktop viewport styles */
 @media only screen and (min-width: 1550px) {
   .editorial-card {
@@ -1486,7 +1532,32 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1879px) {
+@media only screen and (min-width: 1900px) {
+  .nav-container {
+    padding-left: 4em;
+    padding-right: 4em;
+    header {
+      .logo {
+        padding-left: 0;
+      }
+      nav {
+        margin: 0;
+      }
+      .nav-list {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .hero .hero-content {
+    padding: 0 15rem;
+    h1 {
+      font-size: 42px;
+    }
+    ul li {
+      font-size: 24px;
+    }
+  }
   // index
 
   .editorial-card .card-grid_start .inner img {

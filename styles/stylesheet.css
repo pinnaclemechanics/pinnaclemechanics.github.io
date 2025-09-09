@@ -159,8 +159,7 @@ ul li {
   color: #fff;
   text-decoration: none;
 }
-
-.primary-button:hover {
+.primary-button :hover {
   background-color: #173661;
   box-shadow: none;
 }
@@ -204,6 +203,7 @@ header nav #click {
   width: 100%;
   height: inherit;
   background-color: transparent;
+  display: flex;
 }
 .nav-container header .logo {
   display: flex;
@@ -341,26 +341,30 @@ header nav #click {
   width: -webkit-fill-available;
   overflow: hidden;
   border-bottom: 1px solid #18152a;
-}
-.hero .hero-content {
-  width: 60vw;
-  background: #fff;
-  padding: 8rem 16rem;
-  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+}
+.hero .hero-content {
+  background: #fff;
+  padding: 1rem;
   gap: 1em;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #18152a;
+  border-radius: 10px;
 }
 .hero .hero-content h1 {
-  font-size: 38px;
+  font-size: 22px;
   font-weight: 600;
 }
 .hero .hero-content ul li {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: auto;
   letter-spacing: 0.75px;
 }
 .hero .hero-content .primary-button {
@@ -370,8 +374,7 @@ header nav #click {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 50%;
-  width: 50%;
+  width: 100%;
   background: url("../img/banners/hero-banners/index.png") no-repeat center/cover;
   z-index: 1;
 }
@@ -924,7 +927,42 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     border-radius: 0 0 5px 5px;
   }
 }
-@media only screen and (min-width: 895px) {
+@media only screen and (min-width: 768px) {
+  .hero {
+    position: relative;
+    align-items: flex-start;
+    height: 70vh;
+    top: 70px;
+  }
+  .hero .hero-content {
+    width: 60vw;
+    background: #fff;
+    padding: 10rem 3rem;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1em;
+    z-index: 2;
+    border-radius: 0;
+    height: 70vh;
+    border: none;
+  }
+  .hero .hero-content h1 {
+    font-size: 28px;
+  }
+  .hero .hero-content p {
+    font-size: 20px;
+  }
+  .hero .hero-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    height: 70vh;
+    width: 60%;
+  }
   .editorial-card .card-grid_start img {
     display: flex;
     align-self: center;
@@ -985,7 +1023,7 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     letter-spacing: 2pt;
   }
 }
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1024px) {
   .nav-container {
     display: flex;
     flex-direction: row;
@@ -1025,7 +1063,7 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     align-items: center;
     justify-content: center;
     justify-content: flex-end;
-    margin: 0 4em;
+    margin: 0 2em;
     max-height: 60px;
     height: 100%;
   }
@@ -1126,6 +1164,9 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   }
   .menu-btn svg {
     display: none;
+  }
+  .hero .hero-content {
+    padding: 10rem 3rem;
   }
   .research-qoute {
     margin: 0 3em;
@@ -1263,6 +1304,14 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     padding: 1em;
   }
 }
+@media only screen and (min-width: 1400px) {
+  .nav-container header .logo {
+    padding-left: 7em;
+  }
+  .hero .hero-content {
+    padding: 12rem 7rem;
+  }
+}
 /*Large Laptop/ Desktop viewport styles */
 @media only screen and (min-width: 1550px) {
   .editorial-card {
@@ -1324,7 +1373,29 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     font-variant-caps: all-petite-caps;
   }
 }
-@media only screen and (min-width: 1879px) {
+@media only screen and (min-width: 1900px) {
+  .nav-container {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+  .nav-container header .logo {
+    padding-left: 0;
+  }
+  .nav-container header nav {
+    margin: 0;
+  }
+  .nav-container header .nav-list {
+    margin-right: 0;
+  }
+  .hero .hero-content {
+    padding: 0 15rem;
+  }
+  .hero .hero-content h1 {
+    font-size: 42px;
+  }
+  .hero .hero-content ul li {
+    font-size: 24px;
+  }
   .editorial-card .card-grid_start .inner img {
     width: 60%;
   }
