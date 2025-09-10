@@ -447,6 +447,81 @@ img {
   height: 60px;
 }
 
+.secondary-navigation {
+  padding: 2.5em;
+}
+.secondary-navigation .service-links {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 1.5rem;
+  grid-auto-flow: row;
+  margin-top: 1em;
+}
+.secondary-navigation .service-links .item {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  color: inherit;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  box-shadow: 11px 12px 9px -7px rgba(174, 174, 174, 0.39);
+  transition: all 0.3s ease-in-out;
+}
+.secondary-navigation .service-links .item:hover {
+  opacity: 0.7;
+  box-shadow: none;
+}
+.secondary-navigation .service-links .item-image {
+  position: relative;
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.secondary-navigation .service-links .item-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.secondary-navigation .service-links .item-title {
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: white;
+  color: #003366;
+  text-align: center;
+}
+.secondary-navigation .service-links .item.servicing {
+  background: url("../img/navigation/servicing.png") no-repeat center/cover;
+}
+.secondary-navigation .service-links .item.brakes {
+  background: url("../img/navigation/brakes.png") no-repeat center/cover;
+}
+.secondary-navigation .service-links .item.diag {
+  background: url("../img/navigation/diag.png") no-repeat center/cover;
+}
+.secondary-navigation .service-links .item.clutch {
+  background: url("../img/navigation/clutch.png") no-repeat center/cover;
+}
+.secondary-navigation .service-links .item.mot {
+  background: url("../img/navigation/mot.png") no-repeat center/cover;
+}
+.secondary-navigation .service-links .item.exhaust {
+  background: url("../img/navigation/exhausts.png") no-repeat center/cover;
+}
+.secondary-navigation .service-links .item.camBelt {
+  background: url("../img/navigation/cambelt.png") no-repeat center/cover;
+}
+.secondary-navigation .service-links .item.inspect {
+  background: url("../img/navigation/inspections.png") no-repeat center/cover;
+}
+
 .contact-page-section {
   margin-bottom: 30px;
 }
@@ -888,6 +963,17 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   .menu-btn svg {
     right: 2em;
   }
+  .secondary-navigation {
+    padding: 2.5em;
+  }
+  .secondary-navigation .service-links {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-template-rows: unset;
+  }
+  .secondary-navigation .service-links .item {
+    min-height: 6em;
+  }
   .editorial-card,
   .editorial-card > .card-grid-start {
     padding: 2.5em;
@@ -1074,12 +1160,11 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     padding: 0;
     padding-left: 3rem;
   }
-  .events-lightbox .events-lightbox__content {
-    max-width: 504px;
-    height: 765px;
+  .secondary-navigation {
+    padding: 2.5em;
   }
-  .events-lightbox .events-lightbox__content .item {
-    width: 790px;
+  .secondary-navigation .service-links {
+    grid-template-columns: repeat(4, 1fr);
   }
   .contact-page-section {
     padding: 4em;
@@ -1209,8 +1294,10 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
 }
 @media only screen and (min-width: 1900px) {
   .nav-container {
-    padding-left: 15em;
-    padding-right: 15em;
+    padding: 0;
+  }
+  .nav-container header {
+    width: 80%;
   }
   .nav-container header .logo {
     padding-left: 0;
@@ -1315,7 +1402,7 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     margin-right: 13em;
   }
   .editorial-card {
-    margin: 0 20.5em;
+    margin: 0 15em;
   }
   .editorial-card .card-grid_start .inner .sm-image,
   .editorial-card .card-grid_start .inner img,
