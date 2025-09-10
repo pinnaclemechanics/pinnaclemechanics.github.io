@@ -646,6 +646,17 @@ img {
   }
 }
 
+.booking-banner {
+  @include align-center__column;
+  gap: 1em;
+  margin: 0 auto;
+  padding: 2em;
+  h1,
+  p {
+    text-align: center;
+  }
+}
+
 // contact form styles
 .contact-page-section {
   margin-bottom: 30px;
