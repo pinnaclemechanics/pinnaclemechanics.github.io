@@ -486,6 +486,86 @@ img {
     }
   }
 }
+
+.secondary-navigation {
+  padding: 2.5em;
+  .service-links {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 1.5rem;
+    grid-auto-flow: row;
+    margin-top: 1em;
+    .item {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      background-color: #f9f9f9;
+      color: inherit;
+      border: 1px solid gainsboro;
+      border-radius: 10px;
+      box-shadow: $box-shadow-standard;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        opacity: 0.7;
+        box-shadow: none;
+      }
+      &-image {
+        position: relative;
+        min-height: 200px;
+        background-size: cover;
+        background-position: center;
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.2); // Subtle dark filter
+          opacity: 0;
+          transition: opacity 0.2s ease;
+        }
+      }
+
+      &-title {
+        padding: 1rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        background: white;
+        color: #003366;
+        text-align: center;
+      }
+
+      &.servicing {
+        background: url("../img/navigation/servicing.png") no-repeat
+          center/cover;
+      }
+      &.brakes {
+        background: url("../img/navigation/brakes.png") no-repeat center/cover;
+      }
+      &.diag {
+        background: url("../img/navigation/diag.png") no-repeat center/cover;
+      }
+      &.clutch {
+        background: url("../img/navigation/clutch.png") no-repeat center/cover;
+      }
+      &.mot {
+        background: url("../img/navigation/mot.png") no-repeat center/cover;
+      }
+      &.exhaust {
+        background: url("../img/navigation/exhausts.png") no-repeat center/cover;
+      }
+      &.camBelt {
+        background: url("../img/navigation/cambelt.png") no-repeat center/cover;
+      }
+      &.inspect {
+        background: url("../img/navigation/inspections.png") no-repeat
+          center/cover;
+      }
+    }
+  }
+}
 // contact form styles
 .contact-page-section {
   margin-bottom: 30px;
@@ -947,7 +1027,17 @@ footer {
   .menu-btn svg {
     right: 2em;
   }
-
+  .secondary-navigation {
+    padding: 2.5em;
+    .service-links {
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: auto;
+      grid-template-rows: unset;
+      .item {
+        min-height: 6em;
+      }
+    }
+  }
   // padding for page sections
 
   .editorial-card,
@@ -1128,14 +1218,12 @@ footer {
     padding-left: 3rem;
   }
 
-  .events-lightbox .events-lightbox__content {
-    max-width: 504px;
-    height: 765px;
-    .item {
-      width: 790px;
+  .secondary-navigation {
+    padding: 2.5em;
+    .service-links {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
-
   // contact section styles
   .contact-page-section {
     padding: 4em;
@@ -1414,9 +1502,9 @@ footer {
 
 @media only screen and (min-width: 1900px) {
   .nav-container {
-    padding-left: 15em;
-    padding-right: 15em;
+    padding: 0;
     header {
+      width: 80%;
       .logo {
         padding-left: 0;
       }
@@ -1520,7 +1608,7 @@ footer {
     margin-right: 13em;
   }
   .editorial-card {
-    margin: 0 20.5em;
+    margin: 0 15em;
   }
   .editorial-card .card-grid_start .inner .sm-image,
   .editorial-card .card-grid_start .inner img,
