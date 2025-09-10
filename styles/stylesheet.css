@@ -365,7 +365,8 @@ img {
   max-width: 250px;
 }
 
-.usp-banner {
+.usp-banner,
+.strip-banner {
   min-height: 8em;
   width: -webkit-fill-available;
   background-color: #fff;
@@ -375,7 +376,10 @@ img {
   align-items: center;
   justify-content: center;
 }
-.usp-banner .usp-item {
+.usp-banner .usp-item,
+.usp-banner .item,
+.strip-banner .usp-item,
+.strip-banner .item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -383,13 +387,19 @@ img {
   padding: 1em;
   text-align: center;
 }
-.usp-banner .usp-item img {
+.usp-banner .usp-item img,
+.usp-banner .item img,
+.strip-banner .usp-item img,
+.strip-banner .item img {
   width: 50px;
   height: auto;
   margin-bottom: 0.5em;
   border: none;
 }
-.usp-banner .usp-item h3 {
+.usp-banner .usp-item h3,
+.usp-banner .item h3,
+.strip-banner .usp-item h3,
+.strip-banner .item h3 {
   font-size: 16px;
   font-weight: 600;
   color: #18152a;
@@ -409,6 +419,32 @@ img {
   background: url("../img/branding/editorial-banner.png") no-repeat center/contain;
   min-height: 300px;
   height: 100%;
+}
+
+.strip-banner {
+  min-height: 8em;
+  width: -webkit-fill-available;
+  background-color: #0c1444;
+  border: 1px solid #07e1f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.strip-banner .item {
+  max-width: 300px;
+}
+.strip-banner .item h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.strip-banner .item p {
+  color: #fff;
+}
+.strip-banner .item img {
+  width: 60px;
+  height: 60px;
 }
 
 .contact-page-section {
@@ -816,7 +852,8 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
     height: 70vh;
     width: 60%;
   }
-  .usp-banner {
+  .usp-banner,
+  .strip-banner {
     height: 12em;
     width: -webkit-fill-available;
     background-color: #fff;
@@ -846,6 +883,9 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   }
   .menu-btn svg {
     right: 2em;
+  }
+  .strip-banner {
+    background-color: unset;
   }
   .editorial-card,
   .editorial-card > .card-grid-start {

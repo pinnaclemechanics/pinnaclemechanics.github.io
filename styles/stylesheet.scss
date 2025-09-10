@@ -421,13 +421,15 @@ img {
   }
 }
 
-.usp-banner {
+.usp-banner,
+.strip-banner {
   min-height: 8em;
   width: -webkit-fill-available;
   background-color: #fff;
   border-bottom: 1px solid $core-dark;
   @include align-center__column;
-  .usp-item {
+  .usp-item,
+  .item {
     @include align-center__column;
     padding: 1em;
     text-align: center;
@@ -462,6 +464,28 @@ img {
   }
 }
 
+.strip-banner {
+  min-height: 8em;
+  width: -webkit-fill-available;
+  background-color: #0c1444;
+  border: 1px solid #07e1f2;
+  @include align-center__column;
+  .item {
+    max-width: 300px;
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: $core-neutral;
+    }
+    p {
+      color: $core-neutral;
+    }
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
 // contact form styles
 .contact-page-section {
   margin-bottom: 30px;
@@ -890,7 +914,8 @@ footer {
       width: 60%;
     }
   }
-  .usp-banner {
+  .usp-banner,
+  .strip-banner {
     height: 12em;
     width: -webkit-fill-available;
     background-color: #fff;
@@ -918,7 +943,9 @@ footer {
   .menu-btn svg {
     right: 2em;
   }
-
+  .strip-banner {
+    background-color: unset;
+  }
   // padding for page sections
 
   .editorial-card,
