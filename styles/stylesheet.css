@@ -56,7 +56,7 @@ h1 {
 
 h2 {
   color: #2c4465;
-  font-size: 1.35rem;
+  font-size: 2rem;
   font-weight: 500;
   line-height: 1;
   margin-bottom: 0.7rem;
@@ -426,6 +426,7 @@ img {
   width: -webkit-fill-available;
   background-color: #0c1444;
   border: 1px solid #07e1f2;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -448,7 +449,7 @@ img {
 }
 
 .secondary-navigation {
-  padding: 2.5em;
+  padding: 10px;
 }
 .secondary-navigation .service-links {
   display: grid;
@@ -520,6 +521,77 @@ img {
 }
 .secondary-navigation .service-links .item.inspect {
   background: url("../img/navigation/inspections.png") no-repeat center/cover;
+}
+
+.review-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px;
+  width: -webkit-fill-available;
+  gap: 2em;
+}
+.review-section .card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  gap: 1.5rem;
+  grid-auto-flow: row;
+}
+.review-section .card-grid .review-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.review-section .card-grid .review-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.review-section .card-grid .review-card__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.review-section .card-grid .review-card__meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+}
+.review-section .card-grid .review-card__name {
+  font-weight: 600;
+  color: #003366;
+}
+.review-section .card-grid .review-card__date {
+  color: #666;
+}
+.review-section .card-grid .review-card__verified {
+  width: 60px;
+  height: 60px;
+  border: none;
+}
+.review-section .card-grid .review-card__rating {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+.review-section .card-grid .review-card__rating img {
+  width: 20px;
+  height: 20px;
+  border: none;
+}
+.review-section .card-grid .review-card__text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
 }
 
 .contact-page-section {
@@ -974,6 +1046,12 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   .secondary-navigation .service-links .item {
     min-height: 6em;
   }
+  .review-section {
+    padding: 2.5em;
+  }
+  .review-section .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .editorial-card,
   .editorial-card > .card-grid-start {
     padding: 2.5em;
@@ -1166,6 +1244,9 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   .secondary-navigation .service-links {
     grid-template-columns: repeat(4, 1fr);
   }
+  .review-section .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
   .contact-page-section {
     padding: 4em;
   }
@@ -1224,16 +1305,29 @@ footer .footer-container .footer-details .logo-container .mailto-link:hover {
   }
 }
 @media only screen and (min-width: 1400px) {
+  .hero {
+    max-height: 70vh;
+  }
   .hero .hero-content {
-    padding: 12rem 7rem;
+    padding: 6rem 3rem;
   }
   .usp-banner {
     justify-content: space-evenly;
+    padding: 0 9em;
   }
 }
 /*Large Laptop/ Desktop viewport styles */
 @media only screen and (min-width: 1550px) {
-  .editorial-card {
+  .nav-container header {
+    margin: 0 10em;
+  }
+  .hero .hero-content {
+    padding: 0 14rem;
+    width: 30vw;
+  }
+  .editorial-card,
+  .secondary-navigation,
+  .review-section {
     margin: 0 12.5em;
     padding: 0;
   }
