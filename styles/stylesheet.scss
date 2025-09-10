@@ -394,9 +394,15 @@ img {
   width: -webkit-fill-available;
   overflow: hidden;
   border-bottom: 1px solid $core-dark;
-  background: url("../img/banners/hero-banners/index.png") no-repeat
-    center/cover;
   @include align-center__column;
+  &.index-hero {
+    background: url("../img/banners/hero-banners/index.png") no-repeat
+      center/cover;
+  }
+  &.services-hero {
+    background: url("../img/banners/hero-banners/servicing.png") no-repeat
+      center/cover;
+  }
   .hero-content {
     background: #fff;
     padding: 1rem;
@@ -734,11 +740,17 @@ footer {
     }
     .hero-image {
       flex: 1;
-      background: url(../img/banners/hero-banners/index.png) no-repeat
-        center/cover;
       margin-left: -15vw;
       height: 70vh;
       width: 60%;
+      &.index-hero {
+        background: url("../img/banners/hero-banners/index.png") no-repeat
+          center/cover;
+      }
+      &.services-hero {
+        background: url("../img/banners/hero-banners/servicing.png") no-repeat
+          center/cover;
+      }
     }
   }
   .usp-banner,

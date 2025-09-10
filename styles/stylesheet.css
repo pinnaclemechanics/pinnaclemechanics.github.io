@@ -334,11 +334,16 @@ img {
   width: -webkit-fill-available;
   overflow: hidden;
   border-bottom: 1px solid #18152a;
-  background: url("../img/banners/hero-banners/index.png") no-repeat center/cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.hero.index-hero {
+  background: url("../img/banners/hero-banners/index.png") no-repeat center/cover;
+}
+.hero.services-hero {
+  background: url("../img/banners/hero-banners/servicing.png") no-repeat center/cover;
 }
 .hero .hero-content {
   background: #fff;
@@ -688,10 +693,15 @@ footer .footer-container .backlink:hover {
   }
   .hero .hero-image {
     flex: 1;
-    background: url(../img/banners/hero-banners/index.png) no-repeat center/cover;
     margin-left: -15vw;
     height: 70vh;
     width: 60%;
+  }
+  .hero .hero-image.index-hero {
+    background: url("../img/banners/hero-banners/index.png") no-repeat center/cover;
+  }
+  .hero .hero-image.services-hero {
+    background: url("../img/banners/hero-banners/servicing.png") no-repeat center/cover;
   }
   .usp-banner,
   .strip-banner {
