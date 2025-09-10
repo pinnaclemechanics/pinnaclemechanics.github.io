@@ -594,6 +594,20 @@ img {
   color: #333;
 }
 
+.booking-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin: 0 auto;
+  padding: 2em;
+}
+.booking-banner h1,
+.booking-banner p {
+  text-align: center;
+}
+
 .contact-page-section {
   margin-bottom: 30px;
 }
