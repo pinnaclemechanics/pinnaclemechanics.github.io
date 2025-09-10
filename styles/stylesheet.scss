@@ -922,6 +922,10 @@ footer {
     @include align-center__row;
     justify-content: space-evenly;
   }
+  .strip-banner {
+    background-color: #415175;
+    min-height: 16em;
+  }
   .editorial-card {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -943,9 +947,7 @@ footer {
   .menu-btn svg {
     right: 2em;
   }
-  .strip-banner {
-    background-color: unset;
-  }
+
   // padding for page sections
 
   .editorial-card,
