@@ -56,7 +56,7 @@ h1 {
 
 h2 {
   color: #2c4465;
-  font-size: 1.35rem;
+  font-size: 2rem;
   font-weight: 500;
   line-height: 1;
   margin-bottom: 0.7rem;
@@ -520,6 +520,38 @@ img {
 }
 .secondary-navigation .service-links .item.inspect {
   background: url("../img/navigation/inspections.png") no-repeat center/cover;
+}
+
+.review-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2.5em;
+  width: -webkit-fill-available;
+  gap: 2em;
+}
+.review-section .review-banner {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.review-section .review-banner .review-rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.review-section .review-banner .review-rating .star_lg {
+  border: none;
+}
+.review-section .review-banner .google-logo {
+  background: url("../img/icons/review/google-lg-banner.svg") no-repeat center/contain;
+  height: 4em;
+  width: 8em;
 }
 
 .contact-page-section {

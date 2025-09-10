@@ -124,7 +124,7 @@ h1 {
 
 h2 {
   color: #2c4465;
-  font-size: 1.35rem;
+  font-size: 2rem;
   font-weight: 500;
   line-height: 1;
   margin-bottom: 0.7rem;
@@ -566,6 +566,32 @@ img {
     }
   }
 }
+
+.review-section {
+  @include align-left__column;
+  padding: 2.5em;
+  width: -webkit-fill-available;
+  gap: 2em;
+  .review-banner {
+    margin: auto;
+
+    @include align-center__column;
+    .review-rating {
+      @include align-center__row;
+      gap: 1em;
+      .star_lg {
+        border: none;
+      }
+    }
+    .google-logo {
+      background: url("../img/icons/review/google-lg-banner.svg") no-repeat
+        center/contain;
+      height: 4em;
+      width: 8em;
+    }
+  }
+}
+
 // contact form styles
 .contact-page-section {
   margin-bottom: 30px;
