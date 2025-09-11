@@ -181,6 +181,9 @@ ul li {
   font-size: 16px;
   line-height: 30px;
   color: #1a1a1a;
+  .emphasis {
+    font-weight: 600;
+  }
 }
 
 .lazyblurry {
@@ -403,6 +406,14 @@ img {
     background: url("../img/banners/hero-banners/servicing.png") no-repeat
       center/cover;
   }
+  &.brakes-hero {
+    background: url("../img/banners/hero-banners/brakes.png") no-repeat
+      center/cover;
+  }
+  &.diagnostics-hero {
+    background: url("../img/banners/hero-banners/diagnstics.png") no-repeat
+      center/cover;
+  }
   .hero-content {
     background: #fff;
     padding: 1rem;
@@ -467,6 +478,26 @@ img {
       center/contain;
     min-height: 300px;
     height: 100%;
+  }
+}
+
+.editorial {
+  @include align-left__column;
+  padding: 10px;
+  .bulb-banner {
+    @include align-left__row;
+    padding: 1em;
+    gap: 1em;
+    border: 1px solid #07e1f2;
+    border-radius: 10px;
+    // width: 90%;
+    // margin: 1em auto;
+    .bulb-icon {
+      border: none;
+    }
+    .content {
+      @include align-left__column;
+    }
   }
 }
 
@@ -652,11 +683,89 @@ img {
   }
 }
 
+.card-tier-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1em;
+  padding: 10px;
+
+  .card {
+    @include align-left__column;
+    padding: 10px;
+    border: 1px solid #07e1f2;
+    border-radius: 10px;
+
+    .icon-container {
+      @include align-center__row;
+      gap: 1em;
+      margin-bottom: 1em;
+      width: -webkit-fill-available;
+    }
+    .icon {
+      width: 60px;
+      height: auto;
+      border: none;
+    }
+    .header {
+      @include align-left__row;
+      justify-content: space-between;
+      gap: 1em;
+      border-bottom: 1px solid #07e1f2;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      width: -webkit-fill-available;
+      .headline {
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .price {
+        font-size: 16px;
+      }
+    }
+    .contents {
+      .header {
+        font-weight: 500;
+        border: none;
+      }
+      ul li {
+        @include align-left__row;
+        align-items: start;
+        gap: 10px;
+        font-size: 16px;
+        line-height: 24px;
+        .check-icon {
+          height: 16px;
+          width: 16px;
+          border: none;
+        }
+        .cross-icon {
+          height: 16px;
+          width: 16px;
+          border: none;
+        }
+      }
+    }
+    .footer {
+      @include align-center__row;
+      background-color: #173661;
+      color: $core-neutral;
+      width: -webkit-fill-available;
+      height: -webkit-fill-available;
+      border-radius: 0 0 10px 10px;
+      .headline {
+        font-size: 20px;
+        letter-spacing: 0.75px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
 .booking-banner {
   @include align-center__column;
   gap: 1em;
   margin: 0 auto;
-  padding: 2em;
+  padding: 10px;
   .headline,
   p {
     text-align: center;
@@ -677,6 +786,7 @@ img {
     border: none;
   }
 }
+
 footer {
   width: -webkit-fill-available;
   margin-top: 2em;
@@ -765,6 +875,31 @@ footer {
     background-color: #415175;
     min-height: 16em;
   }
+
+  .editorial {
+    @include align-left__column;
+    padding: 10px;
+    .bulb-banner {
+      @include align-left__row;
+      padding: 0.5em;
+      gap: 0.5em;
+      border: 1px solid #07e1f2;
+      border-radius: 10px;
+      width: 90%;
+      margin: 1em auto;
+      .bulb-icon {
+        border: none;
+      }
+      .content {
+        @include align-left__column;
+        h3 {
+          margin-top: 0;
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+  }
+
   .editorial-card {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -787,7 +922,7 @@ footer {
     right: 2em;
   }
   .secondary-navigation {
-    padding: 2.5em;
+    padding: 10px;
     .service-links {
       grid-template-columns: repeat(3, 1fr);
       grid-auto-rows: auto;
@@ -799,14 +934,12 @@ footer {
   }
 
   .review-section {
-    padding: 2.5em;
     .card-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
   .car-grid {
-    padding: 2.5em;
     grid-template-columns: repeat(3, 1fr);
   }
   // padding for page sections
@@ -951,6 +1084,19 @@ footer {
     padding-left: 3rem;
   }
 
+  .editorial {
+    padding: 2.5em;
+    gap: 1em;
+    .bulb-banner {
+      padding: 1.5em;
+      width: 60%;
+      img {
+        width: 120px;
+        height: auto;
+      }
+    }
+  }
+
   .secondary-navigation {
     padding: 2.5em;
     .service-links {
@@ -958,14 +1104,25 @@ footer {
     }
   }
 
-  .review-section .card-grid {
-    grid-template-columns: repeat(4, 1fr);
+  .review-section {
+    padding: 2.5em;
+    .card-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
+
   .car-grid {
+    padding: 2.5em;
     grid-template-columns: repeat(5, 1fr);
   }
-}
 
+  .card-tier-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    padding: 2.5em;
+  }
+}
 @media only screen and (min-width: 1400px) {
   .hero {
     max-height: 70vh;
@@ -994,16 +1151,26 @@ footer {
   .hero {
     .hero-content {
       padding: 0 14rem;
-      width: 30vw;
+      width: 24vw;
     }
   }
   .editorial-card,
   .secondary-navigation,
   .review-section {
-    margin: 0 12.5em;
+    width: 74%;
+    margin: 0 auto;
     padding: 0;
   }
 
+  .editorial {
+    width: 74%;
+    margin: 0 auto;
+  }
+
+  .card-tier-grid {
+    width: 74%;
+    margin: 0 auto;
+  }
   .car-grid {
     grid-template-columns: repeat(5, 1fr);
     margin: 0 10em;
@@ -1014,20 +1181,17 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1900px) {
-  .nav-container {
-    padding: 0;
-    header {
-      width: 80%;
-      .logo {
-        padding-left: 0;
-      }
-      nav {
-        margin: 0;
-      }
-      .nav-list {
-        margin-right: 0;
-      }
+@media only screen and (min-width: 1920px) {
+  .nav-container header {
+    width: 80%;
+    .logo {
+      padding-left: 0;
+    }
+    nav {
+      margin: 0;
+    }
+    .nav-list {
+      margin-right: 0;
     }
   }
 
@@ -1044,14 +1208,5 @@ footer {
 
   .car-grid {
     grid-template-columns: repeat(9, 1fr);
-  }
-}
-
-@media only screen and (min-width: 1919px) {
-  .nav-container header nav ul {
-    margin-right: 13em;
-  }
-  .editorial-card {
-    margin: 0 15em;
   }
 }
