@@ -147,7 +147,7 @@ p {
   line-height: 15pt;
   letter-spacing: 0.55pt;
   margin: 0;
-  &.emphasis {
+  > .emphasis {
     font-weight: 600;
   }
 }
@@ -405,6 +405,10 @@ img {
   }
   &.exhaust-hero {
     background: url("../img/banners/hero-banners/exhaust.png") no-repeat
+      center/cover;
+  }
+  &.purchase-hero {
+    background: url("../img/banners/hero-banners/pre-purchase.png") no-repeat
       center/cover;
   }
   .hero-content {
