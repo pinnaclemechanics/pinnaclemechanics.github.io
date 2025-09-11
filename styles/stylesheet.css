@@ -352,7 +352,13 @@ img {
   background: url("../img/banners/hero-banners/brakes.png") no-repeat center/cover;
 }
 .hero.diagnostics-hero {
-  background: url("../img/banners/hero-banners/diagnstics.png") no-repeat center/cover;
+  background: url("../img/banners/hero-banners/computer.png") no-repeat center/cover;
+}
+.hero.clutch-hero {
+  background: url("../img/banners/hero-banners/clutch.png") no-repeat center/cover;
+}
+.hero.mot-hero {
+  background: url("../img/navigation/mot.png") no-repeat center/contain;
 }
 .hero .hero-content {
   background: #fff;
@@ -1127,7 +1133,7 @@ footer .footer-container .backlink:hover {
   }
   .hero .hero-content {
     padding: 0 14rem;
-    width: 24vw;
+    width: 20vw;
   }
   .editorial-card,
   .secondary-navigation,
@@ -1166,8 +1172,9 @@ footer .footer-container .backlink:hover {
     margin-right: 0;
   }
   .hero .hero-content {
-    padding-right: 26em;
+    padding-right: 15em;
     padding-left: 15em;
+    width: 20vw;
   }
   .hero .hero-content h1 {
     font-size: 42px;

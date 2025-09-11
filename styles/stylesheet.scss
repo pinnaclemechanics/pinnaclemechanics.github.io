@@ -411,8 +411,15 @@ img {
       center/cover;
   }
   &.diagnostics-hero {
-    background: url("../img/banners/hero-banners/diagnstics.png") no-repeat
+    background: url("../img/banners/hero-banners/computer.png") no-repeat
       center/cover;
+  }
+  &.clutch-hero {
+    background: url("../img/banners/hero-banners/clutch.png") no-repeat
+      center/cover;
+  }
+  &.mot-hero {
+    background: url("../img/navigation/mot.png") no-repeat center/contain;
   }
   .hero-content {
     background: #fff;
@@ -1151,7 +1158,7 @@ footer {
   .hero {
     .hero-content {
       padding: 0 14rem;
-      width: 24vw;
+      width: 20vw;
     }
   }
   .editorial-card,
@@ -1196,8 +1203,9 @@ footer {
   }
 
   .hero .hero-content {
-    padding-right: 26em;
+    padding-right: 15em;
     padding-left: 15em;
+    width: 20vw;
     h1 {
       font-size: 42px;
     }
