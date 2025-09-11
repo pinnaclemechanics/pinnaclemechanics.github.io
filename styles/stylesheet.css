@@ -360,6 +360,9 @@ img {
 .hero.mot-hero {
   background: url("../img/navigation/mot.png") no-repeat center/contain;
 }
+.hero.exhaust-hero {
+  background: url("../img/banners/hero-banners/exhaust.png") no-repeat center/cover;
+}
 .hero .hero-content {
   background: #fff;
   padding: 1rem;

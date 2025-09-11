@@ -421,6 +421,10 @@ img {
   &.mot-hero {
     background: url("../img/navigation/mot.png") no-repeat center/contain;
   }
+  &.exhaust-hero {
+    background: url("../img/banners/hero-banners/exhaust.png") no-repeat
+      center/cover;
+  }
   .hero-content {
     background: #fff;
     padding: 1rem;
