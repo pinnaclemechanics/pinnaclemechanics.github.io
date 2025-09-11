@@ -78,7 +78,7 @@ p {
   letter-spacing: 0.55pt;
   margin: 0;
 }
-p.emphasis {
+p > .emphasis {
   font-weight: 600;
 }
 
@@ -338,6 +338,9 @@ img {
 }
 .hero.exhaust-hero {
   background: url("../img/banners/hero-banners/exhaust.png") no-repeat center/cover;
+}
+.hero.purchase-hero {
+  background: url("../img/banners/hero-banners/pre-purchase.png") no-repeat center/cover;
 }
 .hero .hero-content {
   background: #fff;
