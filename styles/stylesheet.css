@@ -47,7 +47,7 @@ body {
 }
 
 h1 {
-  color: #2c4465;
+  color: #0c1444;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.5;
@@ -55,25 +55,16 @@ h1 {
 }
 
 h2 {
-  color: #2c4465;
-  font-size: 2rem;
+  color: #0c1444;
+  font-size: 24px;
   font-weight: 500;
   line-height: 1;
+  letter-spacing: 0.75px;
   margin-bottom: 0.7rem;
 }
 
-h2.headline-text {
-  font-size: 1.68rem;
-  margin-top: 0;
-}
-
-h2.intro-text {
-  font-size: 2.6rem;
-  margin-top: 0;
-}
-
 h3 {
-  color: #2c4465;
+  color: #0c1444;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.2;
@@ -87,16 +78,18 @@ p {
   letter-spacing: 0.55pt;
   margin: 0;
 }
-
-p .highlight-text {
-  color: #38389c;
-  font-weight: 400;
+p.emphasis {
+  font-weight: 600;
 }
 
 a {
-  color: #2c4465;
+  color: #0c1444;
   font-size: 1rem;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 ul {
@@ -120,23 +113,6 @@ ul li {
 }
 ul li .emphasis {
   font-weight: 600;
-}
-
-.lazyblurry {
-  filter: blur(10px);
-}
-
-.lazyloaded {
-  filter: none;
-}
-
-.fade-in {
-  opacity: 0;
-  transition: opacity 1s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
 }
 
 .primary-button {
