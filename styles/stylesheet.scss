@@ -277,7 +277,7 @@ img {
       }
     }
   }
-  header nav ul {
+  header nav .nav-list {
     display: none;
     &.open {
       display: flex;
@@ -409,6 +409,10 @@ img {
   }
   &.purchase-hero {
     background: url("../img/banners/hero-banners/pre-purchase.png") no-repeat
+      center/cover;
+  }
+  &.pricing-hero {
+    background: url("../img/banners/hero-banners/pricing.png") no-repeat
       center/cover;
   }
   .hero-content {
@@ -685,6 +689,8 @@ img {
   grid-template-columns: repeat(1, 1fr);
   gap: 1em;
   padding: 10px;
+  width: 60%;
+  margin: 0 auto;
 
   .card {
     @include align-left__column;
@@ -766,6 +772,62 @@ img {
   .headline,
   p {
     text-align: center;
+  }
+}
+
+.pricing {
+  @include align-center__column;
+  width: 90%;
+  margin: 0 auto;
+  .pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    line-height: 1.4;
+    background: #fff;
+    margin: 0 auto;
+    th,
+    td {
+      border-top: 1px solid gainsboro;
+      border-bottom: 1px solid gainsboro;
+      border-left: none;
+      border-right: none;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th:first-child,
+    td:first-child {
+      border-left: 1px solid gainsboro;
+    }
+    /* Keep right border on last column */
+    th:last-child,
+    td:last-child {
+      border-right: 1px solid gainsboro;
+    }
+    thead {
+      background: #173662;
+      th {
+        font-weight: 500;
+        color: $core-neutral;
+      }
+    }
+    tbody tr:first-child td {
+      border-top: none; // remove top border from first row
+    }
+    tbody tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+    /* --- Hide Description column on mobile --- */
+    th:nth-child(3),
+    td:nth-child(3) {
+      display: none;
+    }
+    /* Mobile-first: allow horizontal scroll if needed */
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }
 
@@ -939,11 +1001,22 @@ footer {
   .car-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  // padding for page sections
+
+  .card-tier-grid {
+    width: 93%;
+  }
 
   .editorial-card,
   .editorial-card > .card-grid-start {
     padding: 2.5em;
+  }
+
+  .pricing-table thead th:nth-child(3),
+  .pricing-table tbody td:nth-child(3) {
+    display: table-cell !important; // force override if needed
+    padding: 0.75rem 1rem;
+    vertical-align: top;
+    white-space: normal; // allow wrapping
   }
 }
 
@@ -1000,6 +1073,7 @@ footer {
               color: #fff;
               transition: border-bottom 1s ease-in-out;
               &:hover {
+                text-decoration: none;
                 border-bottom: 1px solid #fff;
               }
             }
@@ -1133,6 +1207,10 @@ footer {
     padding: 0 9em;
   }
 
+  .pricing {
+    width: 85%;
+  }
+
   footer .footer-container {
     padding: 0 9em;
     @include align-left__row;
@@ -1171,6 +1249,10 @@ footer {
   .car-grid {
     grid-template-columns: repeat(5, 1fr);
     margin: 0 10em;
+  }
+
+  .pricing {
+    width: 60%;
   }
 
   footer .footer-container {
