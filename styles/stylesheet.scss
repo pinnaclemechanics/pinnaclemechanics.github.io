@@ -401,7 +401,7 @@ img {
       center/cover;
   }
   &.mot-hero {
-    background: url("../img/navigation/mot.png") no-repeat center/contain;
+    background: url("../img/navigation/mot.png") no-repeat right/contain;
   }
   &.exhaust-hero {
     background: url("../img/banners/hero-banners/exhaust.png") no-repeat
@@ -411,8 +411,16 @@ img {
     background: url("../img/banners/hero-banners/pre-purchase.png") no-repeat
       center/cover;
   }
+  &.cambelt-hero {
+    background: url("../img/banners/hero-banners/cambelt-banner.png") no-repeat
+      center/cover;
+  }
   &.pricing-hero {
     background: url("../img/banners/hero-banners/pricing.png") no-repeat
+      center/cover;
+  }
+  &.about-hero {
+    background: url("../img/branding/editorial-banner.png") no-repeat
       center/cover;
   }
   .hero-content {
@@ -887,7 +895,7 @@ footer {
     overflow: hidden;
     background-image: none;
     .hero-content {
-      width: 70vw;
+      width: 50vw;
       background: #fff;
       padding: 2rem;
       clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
@@ -913,12 +921,48 @@ footer {
       height: 70vh;
       width: 60%;
       &.index-hero {
-        background: url("../img/banners/hero-banners/index.png") no-repeat
-          center/cover;
+        background-position: right;
+        background-size: contain;
       }
       &.services-hero {
-        background: url("../img/banners/hero-banners/servicing.png") no-repeat
-          center/cover;
+        background-position: right;
+        background-size: contain;
+      }
+      &.brakes-hero {
+        background-position: right;
+        background-size: contain;
+      }
+      &.diagnostics-hero {
+        background-position: right;
+        background-size: contain;
+      }
+      &.clutch-hero {
+        background-position: right;
+        background-size: contain;
+      }
+      &.mot-hero {
+        background-position: right;
+        background-size: contain;
+      }
+      &.exhaust-hero {
+        background-position: right;
+        background-size: contain;
+      }
+      &.purchase-hero {
+        background-position: right;
+        background-size: contain;
+      }
+      &.cambelt-hero {
+        background-position: right;
+        background-size: contain;
+      }
+      &.pricing-hero {
+        background-position: right;
+        background-size: contain;
+      }
+      &.about-hero {
+        background-position: right;
+        background-size: contain;
       }
     }
   }
@@ -1198,6 +1242,7 @@ footer {
   .hero {
     max-height: 70vh;
     .hero-content {
+      width: 30vw;
       padding: 6rem 3rem;
     }
   }
@@ -1277,7 +1322,7 @@ footer {
   .hero .hero-content {
     padding-right: 15em;
     padding-left: 15em;
-    width: 20vw;
+    width: 10vw;
     h1 {
       font-size: 42px;
     }
