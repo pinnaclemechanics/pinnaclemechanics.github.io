@@ -920,47 +920,17 @@ footer {
       margin-left: -15vw;
       height: 70vh;
       width: 60%;
-      &.index-hero {
-        background-position: right;
-        background-size: contain;
-      }
-      &.services-hero {
-        background-position: right;
-        background-size: contain;
-      }
-      &.brakes-hero {
-        background-position: right;
-        background-size: contain;
-      }
-      &.diagnostics-hero {
-        background-position: right;
-        background-size: contain;
-      }
-      &.clutch-hero {
-        background-position: right;
-        background-size: contain;
-      }
-      &.mot-hero {
-        background-position: right;
-        background-size: contain;
-      }
-      &.exhaust-hero {
-        background-position: right;
-        background-size: contain;
-      }
-      &.purchase-hero {
-        background-position: right;
-        background-size: contain;
-      }
-      &.cambelt-hero {
-        background-position: right;
-        background-size: contain;
-      }
-      &.pricing-hero {
-        background-position: right;
-        background-size: contain;
-      }
-      &.about-hero {
+      &.index-hero,
+      .services-hero,
+      .brakes-hero,
+      .diagnostics-hero,
+      .clutch-hero,
+      .mot-hero,
+      .exhaust-hero,
+      .purchase-hero,
+      .cambelt-hero,
+      .pricing-hero,
+      .about-hero {
         background-position: right;
         background-size: contain;
       }

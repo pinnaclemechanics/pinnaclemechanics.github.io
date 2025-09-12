@@ -879,47 +879,17 @@ footer .footer-container .backlink:hover {
     height: 70vh;
     width: 60%;
   }
-  .hero .hero-image.index-hero {
-    background-position: right;
-    background-size: contain;
-  }
-  .hero .hero-image.services-hero {
-    background-position: right;
-    background-size: contain;
-  }
-  .hero .hero-image.brakes-hero {
-    background-position: right;
-    background-size: contain;
-  }
-  .hero .hero-image.diagnostics-hero {
-    background-position: right;
-    background-size: contain;
-  }
-  .hero .hero-image.clutch-hero {
-    background-position: right;
-    background-size: contain;
-  }
-  .hero .hero-image.mot-hero {
-    background-position: right;
-    background-size: contain;
-  }
-  .hero .hero-image.exhaust-hero {
-    background-position: right;
-    background-size: contain;
-  }
-  .hero .hero-image.purchase-hero {
-    background-position: right;
-    background-size: contain;
-  }
-  .hero .hero-image.cambelt-hero {
-    background-position: right;
-    background-size: contain;
-  }
-  .hero .hero-image.pricing-hero {
-    background-position: right;
-    background-size: contain;
-  }
-  .hero .hero-image.about-hero {
+  .hero .hero-image.index-hero,
+  .hero .hero-image .services-hero,
+  .hero .hero-image .brakes-hero,
+  .hero .hero-image .diagnostics-hero,
+  .hero .hero-image .clutch-hero,
+  .hero .hero-image .mot-hero,
+  .hero .hero-image .exhaust-hero,
+  .hero .hero-image .purchase-hero,
+  .hero .hero-image .cambelt-hero,
+  .hero .hero-image .pricing-hero,
+  .hero .hero-image .about-hero {
     background-position: right;
     background-size: contain;
   }
