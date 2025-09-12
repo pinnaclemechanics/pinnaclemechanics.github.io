@@ -215,10 +215,10 @@ img {
   font-style: italic;
   font-weight: 700;
 }
-.nav-container header nav ul {
+.nav-container header nav .nav-list {
   display: none;
 }
-.nav-container header nav ul.open {
+.nav-container header nav .nav-list.open {
   display: flex;
   position: absolute;
   top: 53px;
@@ -236,10 +236,10 @@ img {
   text-transform: uppercase;
   z-index: 1100;
 }
-.nav-container header nav ul.open .accordion-item {
+.nav-container header nav .nav-list.open .accordion-item {
   margin-bottom: 0.5rem;
 }
-.nav-container header nav ul.open .accordion-item .accordion-toggle {
+.nav-container header nav .nav-list.open .accordion-item .accordion-toggle {
   background: inherit;
   font-family: "Poppins";
   letter-spacing: 0.5pt;
@@ -256,20 +256,20 @@ img {
   align-items: center;
   gap: 8px;
 }
-.nav-container header nav ul.open .accordion-item .accordion-toggle .chevron {
+.nav-container header nav .nav-list.open .accordion-item .accordion-toggle .chevron {
   display: inline-block;
   transition: transform 0.3s ease;
 }
-.nav-container header nav ul.open .accordion-item .accordion-toggle.open .chevron {
+.nav-container header nav .nav-list.open .accordion-item .accordion-toggle.open .chevron {
   transform: rotate(180deg);
 }
-.nav-container header nav ul.open .accordion-item .accordion-content {
+.nav-container header nav .nav-list.open .accordion-item .accordion-content {
   display: none;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
-.nav-container header nav ul.open .accordion-item .accordion-content .accordion-content li {
+.nav-container header nav .nav-list.open .accordion-item .accordion-content .accordion-content li {
   width: max-content;
   margin: 25px 0;
   font-size: 1rem;
@@ -279,11 +279,11 @@ img {
   align-items: center;
   justify-content: center;
 }
-.nav-container header nav ul.open .accordion-item .accordion-content.open {
+.nav-container header nav .nav-list.open .accordion-item .accordion-content.open {
   display: contents;
   max-height: 500px;
 }
-.nav-container header nav ul.open li {
+.nav-container header nav .nav-list.open li {
   width: max-content;
   margin: 10px 0;
   font-size: 1.1rem;
@@ -292,7 +292,7 @@ img {
   align-items: center;
   justify-content: center;
 }
-.nav-container header nav ul.open li a {
+.nav-container header nav .nav-list.open li a {
   color: #fff;
   width: 100%;
 }
@@ -341,6 +341,9 @@ img {
 }
 .hero.purchase-hero {
   background: url("../img/banners/hero-banners/pre-purchase.png") no-repeat center/cover;
+}
+.hero.pricing-hero {
+  background: url("../img/banners/hero-banners/pricing.png") no-repeat center/cover;
 }
 .hero .hero-content {
   background: #fff;
@@ -628,6 +631,8 @@ img {
   grid-template-columns: repeat(1, 1fr);
   gap: 1em;
   padding: 10px;
+  width: 60%;
+  margin: 0 auto;
 }
 .card-tier-grid .card {
   display: flex;
@@ -724,6 +729,64 @@ img {
 .booking-banner .headline,
 .booking-banner p {
   text-align: center;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.pricing .pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  line-height: 1.4;
+  background: #fff;
+  margin: 0 auto;
+  /* Keep right border on last column */
+  /* --- Hide Description column on mobile --- */
+  /* Mobile-first: allow horizontal scroll if needed */
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.pricing .pricing-table th,
+.pricing .pricing-table td {
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+  border-left: none;
+  border-right: none;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+.pricing .pricing-table th:first-child,
+.pricing .pricing-table td:first-child {
+  border-left: 1px solid gainsboro;
+}
+.pricing .pricing-table th:last-child,
+.pricing .pricing-table td:last-child {
+  border-right: 1px solid gainsboro;
+}
+.pricing .pricing-table thead {
+  background: #173662;
+}
+.pricing .pricing-table thead th {
+  font-weight: 500;
+  color: #fff;
+}
+.pricing .pricing-table tbody tr:first-child td {
+  border-top: none;
+}
+.pricing .pricing-table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+.pricing .pricing-table th:nth-child(3),
+.pricing .pricing-table td:nth-child(3) {
+  display: none;
 }
 
 .car-grid {
@@ -901,9 +964,19 @@ footer .footer-container .backlink:hover {
   .car-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  .card-tier-grid {
+    width: 93%;
+  }
   .editorial-card,
   .editorial-card > .card-grid-start {
     padding: 2.5em;
+  }
+  .pricing-table thead th:nth-child(3),
+  .pricing-table tbody td:nth-child(3) {
+    display: table-cell !important;
+    padding: 0.75rem 1rem;
+    vertical-align: top;
+    white-space: normal;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -975,6 +1048,7 @@ footer .footer-container .backlink:hover {
     transition: border-bottom 1s ease-in-out;
   }
   .nav-container header nav .nav-list li a:hover {
+    text-decoration: none;
     border-bottom: 1px solid #fff;
   }
   .nav-container header nav .nav-list li .primary-button {
@@ -1099,6 +1173,9 @@ footer .footer-container .backlink:hover {
     justify-content: space-evenly;
     padding: 0 9em;
   }
+  .pricing {
+    width: 85%;
+  }
   footer .footer-container {
     padding: 0 9em;
     display: flex;
@@ -1135,6 +1212,9 @@ footer .footer-container .backlink:hover {
   .car-grid {
     grid-template-columns: repeat(5, 1fr);
     margin: 0 10em;
+  }
+  .pricing {
+    width: 60%;
   }
   footer .footer-container {
     padding: 2em 12.5em;
