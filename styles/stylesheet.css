@@ -334,7 +334,7 @@ img {
   background: url("../img/banners/hero-banners/clutch.png") no-repeat center/cover;
 }
 .hero.mot-hero {
-  background: url("../img/navigation/mot.png") no-repeat center/contain;
+  background: url("../img/navigation/mot.png") no-repeat right/contain;
 }
 .hero.exhaust-hero {
   background: url("../img/banners/hero-banners/exhaust.png") no-repeat center/cover;
@@ -342,8 +342,14 @@ img {
 .hero.purchase-hero {
   background: url("../img/banners/hero-banners/pre-purchase.png") no-repeat center/cover;
 }
+.hero.cambelt-hero {
+  background: url("../img/banners/hero-banners/cambelt-banner.png") no-repeat center/cover;
+}
 .hero.pricing-hero {
   background: url("../img/banners/hero-banners/pricing.png") no-repeat center/cover;
+}
+.hero.about-hero {
+  background: url("../img/branding/editorial-banner.png") no-repeat center/cover;
 }
 .hero .hero-content {
   background: #fff;
@@ -847,7 +853,7 @@ footer .footer-container .backlink:hover {
     background-image: none;
   }
   .hero .hero-content {
-    width: 70vw;
+    width: 50vw;
     background: #fff;
     padding: 2rem;
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
@@ -873,11 +879,19 @@ footer .footer-container .backlink:hover {
     height: 70vh;
     width: 60%;
   }
-  .hero .hero-image.index-hero {
-    background: url("../img/banners/hero-banners/index.png") no-repeat center/cover;
-  }
-  .hero .hero-image.services-hero {
-    background: url("../img/banners/hero-banners/servicing.png") no-repeat center/cover;
+  .hero .hero-image.index-hero,
+  .hero .hero-image .services-hero,
+  .hero .hero-image .brakes-hero,
+  .hero .hero-image .diagnostics-hero,
+  .hero .hero-image .clutch-hero,
+  .hero .hero-image .mot-hero,
+  .hero .hero-image .exhaust-hero,
+  .hero .hero-image .purchase-hero,
+  .hero .hero-image .cambelt-hero,
+  .hero .hero-image .pricing-hero,
+  .hero .hero-image .about-hero {
+    background-position: right;
+    background-size: contain;
   }
   .usp-banner,
   .strip-banner {
@@ -1167,6 +1181,7 @@ footer .footer-container .backlink:hover {
     max-height: 70vh;
   }
   .hero .hero-content {
+    width: 30vw;
     padding: 6rem 3rem;
   }
   .usp-banner {
@@ -1236,7 +1251,7 @@ footer .footer-container .backlink:hover {
   .hero .hero-content {
     padding-right: 15em;
     padding-left: 15em;
-    width: 20vw;
+    width: 10vw;
   }
   .hero .hero-content h1 {
     font-size: 42px;
