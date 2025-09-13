@@ -230,7 +230,7 @@
             </p>
             <p>Thank you.</p>
           </div>
-          <form action="https://formspree.io/f/xblabwgn" method="POST">
+          <form id="contact-form">
             <label for="business-name">Business Name (Optional)</label>
             <input type="text" id="business-name" name="business-name" />
 
@@ -251,11 +251,27 @@
         </div>
       </div>
     </section>
+
     <div id="form-modal" class="modal hidden">
       <div class="modal-content">
-        <h3>✅ Message Sent</h3>
-        <p>Thanks for getting in touch. We'll respond as soon as we can.</p>
-        <button id="close-modal">Close</button>
+        <div class="header">
+          <h3>✅ Message Sent</h3>
+          <div class="close-btn">
+            <img
+              class="close-icon"
+              src="/img/icons/control/close-icon.svg"
+              width="20"
+              height="20"
+              alt="close icon"
+            />
+          </div>
+        </div>
+        <div class="body">
+          <p>Thanks for getting in touch. We'll respond as soon as we can.</p>
+        </div>
+        <div class="footer">
+          <button id="close-modal" class="primary-button">Close</button>
+        </div>
       </div>
     </div>
 
@@ -333,6 +349,16 @@
         >
       </div>
     </section>
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <img
+        class="arrow-icon"
+        src="/img/icons/control/arrow_up.svg"
+        width="30"
+        height="30"
+        alt="back to the top button"
+        title="Click this button to scroll to the top of the page"
+      />
+    </button>
 
     <footer>
       <div class="footer-container">
