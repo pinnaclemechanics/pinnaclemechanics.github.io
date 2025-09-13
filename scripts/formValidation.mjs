@@ -1,5 +1,5 @@
 export function initContactFormValidation() {
-  const form = document.querySelector(".contact-form");
+  const form = document.getElementById("contact-form");
   if (!form) return;
 
   const fields = {
@@ -109,9 +109,5 @@ export function initContactFormValidation() {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     validateAll();
-
-    if (!submitBtn.disabled) {
-      form.submit();
-    }
   });
 }
