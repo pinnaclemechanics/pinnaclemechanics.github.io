@@ -262,6 +262,7 @@ img {
       }
       .logo-container {
         @include align-left__column;
+
         .logo-name {
           font-size: 18px;
           letter-spacing: 6pt;
@@ -275,6 +276,9 @@ img {
           font-style: italic;
           font-weight: 700;
         }
+      }
+      &:hover {
+        text-decoration: none;
       }
     }
   }

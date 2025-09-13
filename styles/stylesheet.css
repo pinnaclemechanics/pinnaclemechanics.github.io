@@ -216,6 +216,9 @@ img {
   font-style: italic;
   font-weight: 700;
 }
+.nav-container header .logo:hover {
+  text-decoration: none;
+}
 .nav-container header nav .nav-list {
   display: none;
 }
