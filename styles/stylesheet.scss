@@ -1322,20 +1322,32 @@ footer {
                 background: inherit;
                 flex-direction: column;
                 &.open {
-                  display: flex;
-                  align-items: flex-start;
-                  justify-content: flex-start;
-                  max-height: 500px;
+                  @include align-left__column;
+                  max-height: unset;
                   height: auto;
+                  width: max-content;
+                  z-index: 1;
+                  top: 48px;
+                  left: 0;
                   background-color: $core-neutral;
                   box-shadow: $box-shadow-standard;
+                  border: 1px solid gainsboro;
+                  border-top: 0;
+                  border-radius: 0 0 8px 8px;
                   li {
+                    @include align-left__row;
                     text-transform: capitalize;
+                    width: -webkit-fill-available;
+                    text-decoration: none;
+                    transition: all 0.3s ease-in-out;
+                    padding: 8px;
                     a {
                       color: #000;
+                      font-size: 16px;
+                      border-bottom: none;
                     }
                     &:hover {
-                      background: gainsboro;
+                      background: #befaff;
                     }
                   }
                 }

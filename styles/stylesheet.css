@@ -1303,21 +1303,39 @@ footer .footer-container .backlink:hover {
   }
   .nav-container header nav .nav-list li.accordion-item .accordion-content.open {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    max-height: 500px;
+    max-height: unset;
     height: auto;
+    width: max-content;
+    z-index: 1;
+    top: 48px;
+    left: 0;
     background-color: #fff;
     box-shadow: 11px 12px 9px -7px rgba(174, 174, 174, 0.39);
+    border: 1px solid gainsboro;
+    border-top: 0;
+    border-radius: 0 0 8px 8px;
   }
   .nav-container header nav .nav-list li.accordion-item .accordion-content.open li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
     text-transform: capitalize;
+    width: -webkit-fill-available;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    padding: 8px;
   }
   .nav-container header nav .nav-list li.accordion-item .accordion-content.open li a {
     color: #000;
+    font-size: 16px;
+    border-bottom: none;
   }
   .nav-container header nav .nav-list li.accordion-item .accordion-content.open li:hover {
-    background: gainsboro;
+    background: #befaff;
   }
   .menu-btn svg {
     display: none;
