@@ -10,7 +10,7 @@ export function initNavigationToggle() {
   }
 
   menuBtn.addEventListener("click", () => {
-    console.log("👉 menu button clicked");
+    console.log("👉 menu button hovered");
     navList.classList.toggle("open");
     console.log("nav-list classes:", navList.className);
   });
