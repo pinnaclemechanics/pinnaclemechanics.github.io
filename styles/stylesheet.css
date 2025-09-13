@@ -320,7 +320,7 @@ img {
   justify-content: center;
 }
 .hero.index-hero {
-  background: url("../img/banners/hero-banners/index.png") no-repeat center/cover;
+  background: url("../img/banners/hero-banners/index-new.jpg") no-repeat center/cover;
 }
 .hero.services-hero {
   background: url("../img/banners/hero-banners/servicing.png") no-repeat center/cover;
@@ -344,7 +344,7 @@ img {
   background: url("../img/banners/hero-banners/pre-purchase.png") no-repeat center/cover;
 }
 .hero.cambelt-hero {
-  background: url("../img/banners/hero-banners/cambelt-banner.png") no-repeat center/cover;
+  background: url("../img/banners/hero-banners/cambelt.png") no-repeat center/cover;
 }
 .hero.pricing-hero {
   background: url("../img/banners/hero-banners/pricing.png") no-repeat center/cover;
@@ -829,19 +829,21 @@ img {
 }
 
 .contact-section {
-  padding: 1rem;
+  width: 100%;
+  padding: 1rem 0;
   background: #f7fafb;
 }
 
 .contact-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
+  margin: 0 auto;
 }
 
 .contact-info {
   background: #fff;
-  border: 1px solid #07e1f2;
+  border: 1px solid #93f7ff;
   border-radius: 10px;
   padding: 1.5rem;
 }
@@ -878,15 +880,17 @@ img {
   align-items: center;
   justify-content: center;
   padding: 0.75rem 1.5rem;
-  background: #07e1f2;
-  color: #003366;
+  background: #93f7ff;
+  color: #011b35;
   border: 1px solid #003366;
   border-radius: 50px;
-  font-weight: 600;
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-family: "Poppins";
   box-shadow: 11px 12px 9px -7px rgba(174, 174, 174, 0.39);
+  transition: all 0.3s ease-in-out;
 }
 .contact-info ul li a:hover {
   background-color: #0996a0;
@@ -903,11 +907,18 @@ img {
 
 .contact-form {
   background: #fff;
-  border: 1px solid #07e1f2;
+  border: 1px solid #93f7ff;
   border-radius: 10px;
   padding: 1.5rem;
 }
-.contact-form h2 {
+.contact-form .context {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1em;
+}
+.contact-form .context h2 {
   margin-bottom: 1rem;
   color: #003366;
 }
@@ -919,7 +930,7 @@ img {
 }
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
+  width: -webkit-fill-available;
   margin-top: 0.25rem;
   padding: 0.75rem;
   border: 1px solid #ccc;
@@ -937,26 +948,30 @@ img {
   margin-top: 0.25rem;
 }
 .contact-form button {
+  margin-top: 1em;
   padding: 0.75rem 1.5rem;
-  background: #07e1f2;
-  color: #003366;
+  background: #93f7ff;
+  color: #011b35;
   border: 1px solid #003366;
   border-radius: 50px;
-  font-weight: 600;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 18px;
   letter-spacing: 1px;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: "Poppins";
   box-shadow: 11px 12px 9px -7px rgba(174, 174, 174, 0.39);
+  transition: all 0.3s ease-in-out;
 }
 .contact-form button[disabled] {
   background-color: #ccc;
   color: #666;
   cursor: not-allowed;
   opacity: 0.6;
+  box-shadow: none;
 }
 .contact-form button:hover {
   background: #00c2d1;
+  box-shadow: none;
 }
 
 .modal {
@@ -1054,19 +1069,17 @@ footer .footer-container .backlink:hover {
     height: 70vh;
     width: 60%;
   }
-  .hero .hero-image.index-hero,
-  .hero .hero-image .services-hero,
-  .hero .hero-image .brakes-hero,
-  .hero .hero-image .diagnostics-hero,
-  .hero .hero-image .clutch-hero,
-  .hero .hero-image .mot-hero,
-  .hero .hero-image .exhaust-hero,
-  .hero .hero-image .purchase-hero,
-  .hero .hero-image .cambelt-hero,
-  .hero .hero-image .pricing-hero,
-  .hero .hero-image .about-hero {
+  .hero .hero-image .about-hero-small {
+    display: none;
+  }
+  .hero .hero-image.index-hero, .hero .hero-image.services-hero, .hero .hero-image.brakes-hero, .hero .hero-image.diagnostics-hero, .hero .hero-image.clutch-hero, .hero .hero-image.mot-hero, .hero .hero-image.exhaust-hero, .hero .hero-image.purchase-hero, .hero .hero-image.cambelt-hero, .hero .hero-image.pricing-hero {
     background-position: right;
     background-size: contain;
+  }
+  .hero .hero-image.about-hero, .hero .hero-image.contact-hero {
+    background-position: right;
+    background-size: contain;
+    height: 50vh;
   }
   .usp-banner,
   .strip-banner {
@@ -1170,6 +1183,7 @@ footer .footer-container .backlink:hover {
   .contact-wrapper {
     flex-direction: row;
     align-items: flex-start;
+    width: 94%;
   }
   .contact-info {
     flex: 1;
@@ -1341,7 +1355,7 @@ footer .footer-container .backlink:hover {
     display: none;
   }
   .hero .hero-content {
-    width: 50vw;
+    width: 30vw;
     padding: 0;
     padding-left: 3rem;
   }
@@ -1378,6 +1392,10 @@ footer .footer-container .backlink:hover {
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
     padding: 2.5em;
+  }
+  .contact-wrapper {
+    width: 90%;
+    margin: 0 auto;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -1424,7 +1442,8 @@ footer .footer-container .backlink:hover {
     width: 74%;
     margin: 0 auto;
   }
-  .card-tier-grid {
+  .card-tier-grid,
+  .contact-wrapper {
     width: 74%;
     margin: 0 auto;
   }
