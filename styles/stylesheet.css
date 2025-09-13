@@ -141,6 +141,7 @@ ul li .emphasis {
 .primary-button:hover {
   background-color: #173661;
   box-shadow: none;
+  text-decoration: none;
 }
 
 img {
@@ -348,7 +349,8 @@ img {
 .hero.pricing-hero {
   background: url("../img/banners/hero-banners/pricing.png") no-repeat center/cover;
 }
-.hero.about-hero {
+.hero.about-hero,
+.hero .contact-hero {
   background: url("../img/branding/editorial-banner.png") no-repeat center/cover;
 }
 .hero .hero-content {
@@ -711,8 +713,8 @@ img {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: #173661;
-  color: #fff;
+  background-color: #07e1f2;
+  color: #034347;
   width: -webkit-fill-available;
   height: -webkit-fill-available;
   border-radius: 0 0 10px 10px;
@@ -769,6 +771,22 @@ img {
   text-align: left;
   vertical-align: top;
 }
+.pricing .pricing-table th .table-btn,
+.pricing .pricing-table td .table-btn {
+  background-color: #07e1f2;
+  padding: 6px;
+  border: 1px solid #034347;
+  border-radius: 4px;
+  box-shadow: 11px 12px 9px -7px rgba(174, 174, 174, 0.39);
+  transition: all 0.3s ease-in-out;
+  color: #034347;
+}
+.pricing .pricing-table th .table-btn:hover,
+.pricing .pricing-table td .table-btn:hover {
+  background-color: #00cbda;
+  box-shadow: none;
+  text-decoration: none;
+}
 .pricing .pricing-table th:first-child,
 .pricing .pricing-table td:first-child {
   border-left: 1px solid gainsboro;
@@ -808,6 +826,163 @@ img {
 }
 .car-grid img {
   border: none;
+}
+
+.contact-section {
+  padding: 1rem;
+  background: #f7fafb;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-info {
+  background: #fff;
+  border: 1px solid #07e1f2;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.contact-info h2 {
+  margin-bottom: 0.5rem;
+  color: #003366;
+}
+.contact-info p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+.contact-info ul li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.contact-info ul li .form-icon {
+  border: none;
+  width: 60px;
+  height: 60px;
+}
+.contact-info ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background: #07e1f2;
+  color: #003366;
+  border: 1px solid #003366;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 11px 12px 9px -7px rgba(174, 174, 174, 0.39);
+}
+.contact-info ul li a:hover {
+  background-color: #0996a0;
+  box-shadow: none;
+  text-decoration: none;
+}
+.contact-info ul li.col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+.contact-form {
+  background: #fff;
+  border: 1px solid #07e1f2;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.contact-form h2 {
+  margin-bottom: 1rem;
+  color: #003366;
+}
+.contact-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.contact-form .field-invalid {
+  border: 1px solid #c00 !important;
+  outline: none;
+}
+.contact-form .field-error {
+  color: #c00;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+.contact-form button {
+  padding: 0.75rem 1.5rem;
+  background: #07e1f2;
+  color: #003366;
+  border: 1px solid #003366;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  box-shadow: 11px 12px 9px -7px rgba(174, 174, 174, 0.39);
+}
+.contact-form button[disabled] {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.contact-form button:hover {
+  background: #00c2d1;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+  display: none;
 }
 
 footer {
@@ -991,6 +1166,17 @@ footer .footer-container .backlink:hover {
     padding: 0.75rem 1rem;
     vertical-align: top;
     white-space: normal;
+  }
+  .contact-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .contact-info {
+    flex: 1;
+    max-width: 40%;
+  }
+  .contact-form {
+    flex: 2;
   }
 }
 @media only screen and (min-width: 1024px) {

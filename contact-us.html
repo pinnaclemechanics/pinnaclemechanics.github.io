@@ -10,7 +10,7 @@
       content="Pinnacle Mobile Mechanics Website Designed & Developed by Joseph M Percival. www.josephmpercival.co.uk"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PINNACLE - About Us</title>
+    <title>PINNACLE - Get In Touch !</title>
 
     <link rel="icon" href="img/branding/favicon.svg" type="image/svg+xml" />
 
@@ -97,12 +97,12 @@
       </header>
     </section>
 
-    <section class="hero about-hero">
+    <section class="hero contact-hero">
       <div class="hero-content">
-        <h1>About Us</h1>
-        <a href="/contact-us.html" class="primary-button">Book Today</a>
+        <h1>Get In Touch!</h1>
+        <a href="#form" class="primary-button">Book Today</a>
       </div>
-      <div class="hero-image about-hero"></div>
+      <div class="hero-image contact-hero"></div>
     </section>
 
     <section class="usp-banner">
@@ -141,44 +141,13 @@
     </section>
 
     <section class="editorial">
-      <h2>About Us</h2>
+      <h2>Get In Touch !</h2>
       <p>
-        We are a highly experienced mobile mechanic service team and we offer
-        the same range of services and high standards you get from any garage
-        including:
-      </p>
-      <ul>
-        <li>All Vehicle Repairs</li>
-        <li>Servicing</li>
-        <li>Exhaust Repair and Replacement</li>
-        <li>Diagnostic Fault Finding & Repair</li>
-        <li>and Much more!</li>
-      </ul>
-      <p>
-        All this is done at your convenience and at an unbeatable price. Whether
-        you would like our technicians to come to your home, workplace or
-        destination of your choosing. Our Job is to make the experience more
-        convenient and cheaper for you, as we understand dropping the car at a
-        workshop can be a hassle.
-      </p>
-      <p>We take pride in our stress-free and professional service.</p>
-      <p>We are guaranteed to beat any written quotation from any garage!</p>
-      <p>
-        Our transparent pricing policy means that we don’t give any surprises
-        and what we quote is what you pay.
-      </p>
-      <p>
-        We Cover most of the Northwest including
-        <span class="emphasis">Liverpool</span>,
-        <span class="emphasis">St Helens</span>,
-        <span class="emphasis">Wigan</span>, and
-        <span class="emphasis">Bolton</span> - if you are not sure if we can
-        reach you, please call us on
-        <a href="tel:+447312598209">07312598209</a>,
-        <a href="mailto: m.b.mobile.mechanic451@gmail.com">Email Us</a> or you
-        can send us a message on our
-        <a href="/contact-us.html">Contact Us</a> page. We have an excellent
-        reputation, and Roadside guarantees you won’t be disappointed.
+        We would love to help you and have several ways for you to get in touch.
+        Even if you are unsure of what is wrong with your vehicle, want some
+        free independant advice for your next steps - please get in touch today,
+        we are here to help you and will not be beaten on price from any
+        previous writtemn qoute you have been given from any garage!
       </p>
     </section>
 
@@ -188,8 +157,93 @@
         You'll get a qoute in minutes, just tell us the issue, your location and
         when you want us to fix it
       </p>
-      <a href="/contact-us" class="primary-button">Book Today</a>
+      <a href="#form" class="primary-button">Book Today</a>
     </section>
+
+    <section class="contact-section">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <h2>Get In Touch</h2>
+          <p>
+            Simply fill out the details below and we will be in contact with you
+            as soon as we can.
+          </p>
+          <ul>
+            <li>
+              <img
+                src="/img/icons/control/mail-icon.svg"
+                alt="email icon"
+                width="20"
+                height="20"
+                class="form-icon"
+              />
+              <a
+                href="mailto:m.b.mobile.mechanic451@gmail.com"
+                title="Tapping here will create a direct email to: m.b.mobile.mechanic451@gmail.com"
+                >Send Email</a
+              >
+            </li>
+            <li>
+              <img
+                src="/img/icons/control/tel-icon.svg"
+                alt="telephone icon"
+                width="20"
+                height="20"
+                class="form-icon"
+              />
+              <a
+                href="tel:+447312598209"
+                title="Tapping here will call us on: 07312598209"
+                >Call Us</a
+              >
+            </li>
+            <li>
+              <img
+                src="/img/icons/control/time-icon.svg"
+                alt="telephone icon"
+                width="20"
+                height="20"
+                class="form-icon"
+              />
+              <div class="col">
+                <span class="emphasis">Business Hours:</span><br />
+
+                Monday – Friday 8.00AM – 6.00PM
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div id="form" class="contact-form">
+          <h2>Send us a message</h2>
+          <form action="https://formspree.io/f/xblabwgn" method="POST">
+            <label for="business-name">Business Name (Optional)</label>
+            <input type="text" id="business-name" name="business-name" />
+
+            <label for="full-name">Your Full Name *</label>
+            <input type="text" id="full-name" name="full-name" required />
+
+            <label for="email">Your Email *</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="phone">Your Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required />
+
+            <label for="message">Enter your brief message here *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <div id="form-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>✅ Message Sent</h3>
+        <p>Thanks for getting in touch. We'll respond as soon as we can.</p>
+        <button id="close-modal">Close</button>
+      </div>
+    </div>
 
     <section class="secondary-navigation">
       <h2>Services We Offer</h2>
