@@ -323,38 +323,38 @@ img {
   justify-content: center;
 }
 .hero.index-hero {
-  background: url("../img/banners/hero-banners/index-new.jpg") no-repeat center/cover;
+  background: url("../img/banners/hero-banners/index-new.webp") no-repeat center/cover;
 }
 .hero.services-hero {
-  background: url("../img/banners/hero-banners/servicing.png") no-repeat center/cover;
+  background: url("../img/banners/hero-banners/servicing.webp") no-repeat center/cover;
 }
 .hero.brakes-hero {
-  background: url("../img/banners/hero-banners/brakes.png") no-repeat center/cover;
+  background: url("../img/banners/hero-banners/brakes.webp") no-repeat center/cover;
 }
 .hero.diagnostics-hero {
-  background: url("../img/banners/hero-banners/computer.png") no-repeat center/cover;
+  background: url("../img/banners/hero-banners/computer.webp") no-repeat center/cover;
 }
 .hero.clutch-hero {
-  background: url("../img/banners/hero-banners/clutch.png") no-repeat center/cover;
+  background: url("../img/banners/hero-banners/clutch.webp") no-repeat center/cover;
 }
 .hero.mot-hero {
-  background: url("../img/navigation/mot.png") no-repeat right/contain;
+  background: url("../img/navigation/mot.webp") no-repeat right/contain;
 }
 .hero.exhaust-hero {
-  background: url("../img/banners/hero-banners/exhaust.png") no-repeat center/cover;
+  background: url("../img/banners/hero-banners/exhaust.webp") no-repeat center/cover;
 }
 .hero.purchase-hero {
-  background: url("../img/banners/hero-banners/pre-purchase.png") no-repeat center/cover;
+  background: url("../img/banners/hero-banners/pre-purchase.webp") no-repeat center/cover;
 }
 .hero.cambelt-hero {
-  background: url("../img/banners/hero-banners/cambelt.png") no-repeat center/cover;
+  background: url("../img/banners/hero-banners/cambelt.webp") no-repeat center/cover;
 }
 .hero.pricing-hero {
-  background: url("../img/banners/hero-banners/pricing.png") no-repeat center/cover;
+  background: url("../img/banners/hero-banners/pricing.webp") no-repeat center/cover;
 }
 .hero.about-hero,
 .hero .contact-hero {
-  background: url("../img/branding/editorial-banner.png") no-repeat center/cover;
+  background: url("../img/branding/editorial-banner.webp") no-repeat center/cover;
 }
 .hero .hero-content {
   background: #fff;
@@ -432,7 +432,7 @@ img {
   padding: 10px;
 }
 .editorial-card .card-grid_end {
-  background: url("../img/branding/editorial-banner.png") no-repeat center/contain;
+  background: url("../img/branding/editorial-banner.webp") no-repeat center/contain;
   min-height: 300px;
   height: 100%;
 }
@@ -542,28 +542,28 @@ img {
   text-align: center;
 }
 .secondary-navigation .service-links .item.servicing {
-  background: url("../img/navigation/servicing.png") no-repeat center/cover;
+  background: url("../img/navigation/servicing.webp") no-repeat center/cover;
 }
 .secondary-navigation .service-links .item.brakes {
-  background: url("../img/navigation/brakes.png") no-repeat center/cover;
+  background: url("../img/navigation/brakes.webp") no-repeat center/cover;
 }
 .secondary-navigation .service-links .item.diag {
-  background: url("../img/navigation/diag.png") no-repeat center/cover;
+  background: url("../img/navigation/diag.webp") no-repeat center/cover;
 }
 .secondary-navigation .service-links .item.clutch {
-  background: url("../img/navigation/clutch.png") no-repeat center/cover;
+  background: url("../img/navigation/clutch.webp") no-repeat center/cover;
 }
 .secondary-navigation .service-links .item.mot {
-  background: url("../img/navigation/mot.png") no-repeat center/cover;
+  background: url("../img/navigation/mot.webp") no-repeat center/cover;
 }
 .secondary-navigation .service-links .item.exhaust {
-  background: url("../img/navigation/exhausts.png") no-repeat center/cover;
+  background: url("../img/navigation/exhausts.webp") no-repeat center/cover;
 }
 .secondary-navigation .service-links .item.camBelt {
-  background: url("../img/navigation/cambelt.png") no-repeat center/cover;
+  background: url("../img/navigation/cambelt.webp") no-repeat center/cover;
 }
 .secondary-navigation .service-links .item.inspect {
-  background: url("../img/navigation/inspections.png") no-repeat center/cover;
+  background: url("../img/navigation/inspections.webp") no-repeat center/cover;
 }
 
 .review-section {
