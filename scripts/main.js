@@ -1,18 +1,27 @@
-import { initAccordion } from "./accordionToggle.mjs";
-import { initNavigationToggle } from "./navigationToggle.mjs";
-import { enableStickyNav } from "./stickyNavigation.mjs";
-import { initContactFormValidation } from "./formValidation.mjs";
-import { initContactFormSubmission } from "./formSubmit.mjs";
-import { initModalControl } from "./modalFunctionality.mjs";
-import { initBackToTopButton } from "./btttButton.mjs";
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    await (async () => {
+      const { initAccordion } = await import("./accordionToggle.mjs");
+      const { initNavigationToggle } = await import("./navigationToggle.mjs");
+      const { enableStickyNav } = await import("./stickyNavigation.mjs");
+      const { initContactFormValidation } = await import(
+        "./formValidation.mjs"
+      );
+      const { initContactFormSubmission } = await import("./formSubmit.mjs");
+      const { initModalControl } = await import("./modalFunctionality.mjs");
+      const { initBackToTopButton } = await import("./btttButton.mjs");
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("✅ main.js loaded");
-  initAccordion();
-  initNavigationToggle();
-  enableStickyNav();
-  initContactFormValidation();
-  initContactFormSubmission();
-  initModalControl();
-  initBackToTopButton();
+      initAccordion();
+      initNavigationToggle();
+      enableStickyNav();
+      initContactFormValidation();
+      initContactFormSubmission();
+      initModalControl();
+      initBackToTopButton();
+    })();
+
+    console.log("✅ Main functionality initialised.");
+  } catch (err) {
+    console.error("❌ Error during initialisation:", err);
+  }
 });
