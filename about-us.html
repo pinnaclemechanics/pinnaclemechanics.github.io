@@ -41,6 +41,52 @@
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="400" />
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "Pinnacle Mobile Mechanics",
+        "url": "https://www.pinnaclemobilemechanics.co.uk/about-us.html",
+        "image": "https://www.pinnaclemobilemechanics.co.uk/img/branding/small-logo.svg",
+        "description": "Experienced mobile mechanics offering full garage-standard repairs, diagnostics, and servicing across Liverpool, St Helens, Wigan, and Bolton. We guarantee to beat any written quote from a reputable garage—subject to verification and service equivalence.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "St Helens",
+          "addressRegion": "Merseyside",
+          "addressCountry": "GB"
+        },
+        "areaServed": [
+          { "@type": "Place", "name": "Liverpool" },
+          { "@type": "Place", "name": "St Helens" },
+          { "@type": "Place", "name": "Wigan" },
+          { "@type": "Place", "name": "Bolton" }
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+44 7830 299388",
+          "contactType": "Customer Service",
+          "email": "m.b.mobile.mechanic451@gmail.com",
+          "areaServed": "GB",
+          "availableLanguage": "en-GB"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:00",
+            "closes": "18:00"
+          }
+        ]
+      }
+    </script>
+
     <link
       rel="preload"
       href="/assets/woff-files/Poppins-500.woff2"
@@ -189,7 +235,12 @@
         workshop can be a hassle.
       </p>
       <p>We take pride in our stress-free and professional service.</p>
-      <p>We are guaranteed to beat any written quotation from any garage!</p>
+      <p>
+        <span class="emphasis">
+          We guarantee to beat any written quote from a reputable garage—subject
+          to verification and service equivalence.</span
+        >
+      </p>
       <p>
         Our transparent pricing policy means that we don’t give any surprises
         and what we quote is what you pay.
@@ -292,6 +343,7 @@
         >
       </div>
     </section>
+
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">
       <img
         class="arrow-icon"
