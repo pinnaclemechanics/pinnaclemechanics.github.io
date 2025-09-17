@@ -412,10 +412,10 @@ img {
   margin-bottom: 0.5em;
   border: none;
 }
-.usp-banner .usp-item h3,
-.usp-banner .item h3,
-.strip-banner .usp-item h3,
-.strip-banner .item h3 {
+.usp-banner .usp-item h2,
+.usp-banner .item h2,
+.strip-banner .usp-item h2,
+.strip-banner .item h2 {
   font-size: 16px;
   font-weight: 600;
   color: #18152a;
@@ -575,6 +575,17 @@ img {
   width: -webkit-fill-available;
   gap: 2em;
 }
+.review-section .align-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 22px;
+}
+.review-section .align-center .emphasis {
+  margin-left: 10px;
+}
 .review-section .card-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -601,7 +612,26 @@ img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  object-fit: cover;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #0c1444;
+}
+.review-section .card-grid .review-card__avatar.pink {
+  background-color: pink;
+}
+.review-section .card-grid .review-card__avatar.green {
+  background-color: #6cdb6c;
+}
+.review-section .card-grid .review-card__avatar.blue {
+  background-color: #99e2ff;
+}
+.review-section .card-grid .review-card__avatar.yellow {
+  background-color: #ffff8c;
 }
 .review-section .card-grid .review-card__meta {
   flex: 1;
@@ -1547,15 +1577,13 @@ footer .footer-container .backlink:hover {
     margin-right: 0;
   }
   .hero .hero-content {
-    padding-right: 15em;
-    padding-left: 15em;
-    width: 10vw;
+    width: 20vw;
   }
   .hero .hero-content h1 {
-    font-size: 42px;
+    font-size: 32px;
   }
   .hero .hero-content ul li {
-    font-size: 24px;
+    font-size: 22px;
   }
   .car-grid {
     grid-template-columns: repeat(9, 1fr);

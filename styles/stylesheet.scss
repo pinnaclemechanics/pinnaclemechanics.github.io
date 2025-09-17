@@ -471,7 +471,7 @@ img {
       margin-bottom: 0.5em;
       border: none;
     }
-    h3 {
+    h2 {
       font-size: 16px;
       font-weight: 600;
       color: $core-dark;
@@ -626,7 +626,14 @@ img {
   padding: 10px;
   width: -webkit-fill-available;
   gap: 2em;
-
+  .align-center {
+    @include align-center__row;
+    width: 100%;
+    font-size: 22px;
+    .emphasis {
+      margin-left: 10px;
+    }
+  }
   .card-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -653,7 +660,23 @@ img {
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        object-fit: cover;
+        padding: 10px;
+        @include align-center__column;
+        font-size: 22px;
+        font-weight: 600;
+        color: #0c1444;
+        &.pink {
+          background-color: pink;
+        }
+        &.green {
+          background-color: #6cdb6c;
+        }
+        &.blue {
+          background-color: #99e2ff;
+        }
+        &.yellow {
+          background-color: #ffff8c;
+        }
       }
 
       &__meta {
@@ -1576,14 +1599,12 @@ footer {
   }
 
   .hero .hero-content {
-    padding-right: 15em;
-    padding-left: 15em;
-    width: 10vw;
+    width: 20vw;
     h1 {
-      font-size: 42px;
+      font-size: 32px;
     }
     ul li {
-      font-size: 24px;
+      font-size: 22px;
     }
   }
 

@@ -1,29 +1,30 @@
 export function openModal() {
-  const modal = document.getElementById("form-modal");
-  if (modal) modal.style.display = "flex";
-  console.log("Modal Opened!");
+  const modal = document.querySelector("#form-modal");
+  if (!modal) {
+    console.warn("⏸️ Modal not found. Cannot open.");
+    return;
+  }
+  modal.classList.remove("hidden");
 }
 
 export function initModalControl() {
-  const modal = document.getElementById("form-modal");
-  const modalContent = modal?.querySelector(".modal-content");
-  const closeModalBtn = document.getElementById("close-modal");
-  const closeIconBtn = modal.querySelector(".close-btn");
+  const modal = document.querySelector("#form-modal");
+  const closeBtn = document.querySelector("#close-modal");
 
-  if (!modal || !modalContent || !closeModalBtn || !closeIconBtn) return;
-
-  function closeModal() {
-    modal.style.display = "none";
+  if (!modal || !closeBtn) {
+    console.warn("⏸️ Modal control skipped—elements missing.");
+    return;
   }
 
-  closeModalBtn.addEventListener("click", closeModal);
-  closeIconBtn.addEventListener("click", closeModal);
-
-  modal.addEventListener("click", (e) => {
-    if (!modalContent.contains(e.target)) closeModal();
+  closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
   });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeModal();
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+      modal.classList.add("hidden");
+    }
   });
+
+  console.log("✅ Modal control initialised.");
 }
