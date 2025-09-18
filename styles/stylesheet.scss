@@ -465,6 +465,11 @@ img {
     @include align-center__column;
     padding: 1em;
     text-align: center;
+    .phone-icon {
+      width: 20%; /* fills container width */
+      height: auto; /* fills container height */
+    }
+
     img {
       width: 50px;
       height: auto;

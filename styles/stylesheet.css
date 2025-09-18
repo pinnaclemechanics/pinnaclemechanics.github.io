@@ -403,6 +403,13 @@ img {
   padding: 1em;
   text-align: center;
 }
+.usp-banner .usp-item .phone-icon,
+.usp-banner .item .phone-icon,
+.strip-banner .usp-item .phone-icon,
+.strip-banner .item .phone-icon {
+  width: 20%; /* fills container width */
+  height: auto; /* fills container height */
+}
 .usp-banner .usp-item img,
 .usp-banner .item img,
 .strip-banner .usp-item img,
